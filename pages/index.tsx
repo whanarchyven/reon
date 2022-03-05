@@ -1,9 +1,21 @@
+import React, { Component } from "react";
 import type { NextPage } from 'next'
+import Slider from "react-slick";
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import CenterMode from "../components/CenterSlider";
+import SimpleSlider from "../components/CenterSlider";
 
 const Home: NextPage = () => {
+    const settings = {
+        className: "center",
+        centerMode: true,
+        infinite: true,
+        centerPadding: "60px",
+        slidesToShow: 3,
+        speed: 500
+    };
   return (
     <div className={styles.container}>
       <Head>
@@ -28,7 +40,7 @@ const Home: NextPage = () => {
 
           {/*INTRO*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[1px] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_1.png)] relative w-[100vw] h-[58vw]'}>
+          <div className={'overflow-auto block bg-cover text-[10px] top-[0.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_1.png)] relative w-[100vw] h-[58vw]'}>
               <h1 className={'absolute inline-block left-[30vw] top-[20vw] text-reon text-[9vw] font-title'}><span className={'text-[12vw]'}>R</span>EO<span className={'text-[12vw]'}>N</span></h1>
               <h3 className={'absolute inline-block font-desc text-white left-[56vw] top-[26vw] leading-[123%] w-[27vw] text-[1.7vw]'}>From gamers and for gamers.
                   We promise you a new experience in GameFi</h3>
@@ -91,6 +103,94 @@ const Home: NextPage = () => {
                   {/*<Image src={'/images/AboutScreenShapes/3.svg'} layout={'fill'} className={'absolute top-0 blur-shape absolute w-full h-full'}></Image>*/}
               </div>
           </div>
+
+          {/*TEASER*/}
+
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_3.png)] relative w-[100vw] h-[58vw]'}>
+              <h1 className={'tracking-[0.035em] absolute inline-block left-[51vw] top-[0vw] text-reon text-[6.3vw] font-title'}>TEASER</h1>
+              <iframe className={'absolute left-[25.9vw] top-[12vw] w-[67vw] h-[38vw]'} src="https://www.youtube.com/embed/6ohYYtxfDCg"
+                      title="YouTube video player" frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen>
+              </iframe>
+          </div>
+
+          {/*RACES*/}
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.2vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_4.png)] relative w-[100vw] h-[61vw]'}>
+
+          </div>
+
+          {/*CLASSES*/}
+
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.4vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_5.png)] relative w-[100vw] h-[61vw]'}>
+              <h1 className={'absolute right-[8vw]  tracking-[0.035em] inline-block top-[9.3vw] text-reon text-[7vw] font-title'}>CLASSES</h1>
+              <h3 className={'font-light absolute inline-block font-desc text-white left-[26.7vw] top-[10.1vw] leading-[118.5%] w-[42vw] text-[1.45vw]'}>There are no common classes in the game. Each build is unique and you can adjust the stats for each specific case and fight. You can boost Crite and hit your opponents with x2 modifier, you can boost Dexterity and dodge almost all blows, you can boost Luck and specialize on block piercing or specialize on reaction and give damage in response to blocked blows.</h3>
+              <div className={'rotate-[270deg] inline-block absolute w-[8vw] h-[8vw] right-[5.2vw] top-[13.4vw]'}>
+                  <Image src={'/images/goldframe.svg'} layout={'fill'}></Image>
+              </div>
+              <div className={'absolute left-[29vw]  top-[29.6vw] w-[19.6vw] h-[25vw]'}>
+                  <div className={'mx-auto my-[5%] blur-shape rounded-[0.6vw] w-[80%] h-[92%] h-[7.5vw]'}>
+                  </div>
+                  <div className={'inline-block mx-[30%] top-[-3%] inline-block absolute w-[40%] h-[10%]'}>
+                      <Image src={'/images/class_uzor.svg'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'ml-[3%] mt-[7%] absolute w-[80%] h-[80%] top-0 left-0 '}>
+                      <Image src={'/images/class1.png'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'inline-block mx-[30%] bottom-[-3%] rotate-180 inline-block absolute w-[40%] h-[10%]'}>
+                     <Image src={'/images/class_uzor.svg'} layout={'fill'}></Image>
+                  </div>
+              </div>
+              <div className={'absolute left-[47vw]  top-[26.3vw] w-[24vw] h-[31vw]'}>
+                  <div className={'mx-auto my-[5%] blur-shape rounded-[0.6vw] w-[80%] h-[92%] h-[7.5vw]'}>
+                  </div>
+                  <div className={'inline-block mx-[30%] top-[-3%] inline-block absolute w-[40%] h-[10%]'}>
+                      <Image src={'/images/class_uzor.svg'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'left-[11%] top-[9%] absolute w-[72%] h-[77%]'}>
+                      <Image src={'/images/class3.png'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'inline-block mx-[30%] bottom-[-3%] rotate-180 inline-block absolute w-[40%] h-[10%]'}>
+                      <Image src={'/images/class_uzor.svg'} layout={'fill'}></Image>
+                  </div>
+              </div>
+              <div className={'absolute right-[11vw]  top-[29.6vw] w-[19.6vw] h-[25vw]'}>
+                  <div className={'mx-auto my-[5%] blur-shape rounded-[0.6vw] w-[80%] h-[92%] h-[7.5vw]'}>
+                  </div>
+                  <div className={'inline-block mx-[30%] top-[-3%] inline-block absolute w-[40%] h-[10%]'}>
+                      <Image src={'/images/class_uzor.svg'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'absolute w-[90%] h-[80%] top-[10%] left-[-3%] '}>
+                      <Image src={'/images/class2.png'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'inline-block mx-[30%] bottom-[-3%] rotate-180 inline-block absolute w-[40%] h-[10%]'}>
+                      <Image src={'/images/class_uzor.svg'} layout={'fill'}></Image>
+                  </div>
+              </div>
+          </div>
+
+          {/*CLAN WARS*/}
+
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.5vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_6.png)] relative w-[100vw] h-[61vw]'}>
+              <div className={'absolute left-[40.5vw] top-[3vw] w-[35vw] h-[30vw]'}>
+                  <Image src={'/images/shields.png'} layout={'fill'}></Image>
+              </div>
+              <h1 className={'absolute inline-block left-[41.3vw] top-[31vw] text-reon text-[8vw] font-title'}>CLAN WARS</h1>
+              <h3 className={'text-center font-light absolute inline-block font-desc text-white bottom-[10.3vw] left-[30vw] leading-[123%] w-[54vw] text-[1.6vw]'}>Implemented a system of influence in the territory through the capture of outposts and cities during clan battles. Also clan fighters with a castle can help each other in battles, changing the course of battles in just 1-2 rounds</h3>
+              <div className={'inline-block absolute left-[42vw] bottom-[6vw] w-[31.6vw] h-[2vw]'}><Image className={'rotate-180'} src={'/images/uzor.png'} layout={'fill'} /></div>
+          </div>
+
+          {/*/!*CRAFT*!/*/}
+
+          {/*<div className={'overflow-auto block bg-cover text-[10px] top-[-0.5vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_6.png)] relative w-[100vw] h-[61vw]'}>*/}
+          {/*    <div className={'absolute left-[40.5vw] top-[3vw] w-[35vw] h-[30vw]'}>*/}
+          {/*        <Image src={'/images/shields.png'} layout={'fill'}></Image>*/}
+          {/*    </div>*/}
+          {/*    <h1 className={'absolute inline-block left-[41.3vw] top-[31vw] text-reon text-[8vw] font-title'}>CLAN WARS</h1>*/}
+          {/*    <h3 className={'text-center font-light absolute inline-block font-desc text-white bottom-[10.3vw] left-[30vw] leading-[123%] w-[54vw] text-[1.6vw]'}>Implemented a system of influence in the territory through the capture of outposts and cities during clan battles. Also clan fighters with a castle can help each other in battles, changing the course of battles in just 1-2 rounds</h3>*/}
+          {/*    <div className={'inline-block absolute left-[42vw] bottom-[6vw] w-[31.6vw] h-[2vw]'}><Image className={'rotate-180'} src={'/images/uzor.png'} layout={'fill'} /></div>*/}
+          {/*</div>*/}
+
       </main>
 
       <footer className={styles.footer}>
