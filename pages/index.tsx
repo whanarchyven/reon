@@ -40,7 +40,7 @@ const Home: NextPage = () => {
 
           {/*INTRO*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[0.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_1.png)] relative w-[100vw] h-[58vw]'}>
+          <div className={' block bg-cover text-[10px] top-[0.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_1.png)] relative w-[100vw] h-[58vw]'}>
               <h1 className={'absolute inline-block left-[30vw] top-[20vw] text-reon text-[9vw] font-title'}><span className={'text-[12vw]'}>R</span>EO<span className={'text-[12vw]'}>N</span></h1>
               <h3 className={'absolute inline-block font-desc text-white left-[56vw] top-[26vw] leading-[123%] w-[27vw] text-[1.7vw]'}>From gamers and for gamers.
                   We promise you a new experience in GameFi</h3>
@@ -180,16 +180,178 @@ const Home: NextPage = () => {
               <div className={'inline-block absolute left-[42vw] bottom-[6vw] w-[31.6vw] h-[2vw]'}><Image className={'rotate-180'} src={'/images/uzor.png'} layout={'fill'} /></div>
           </div>
 
-          {/*/!*CRAFT*!/*/}
+          {/*CRAFT*/}
 
-          {/*<div className={'overflow-auto block bg-cover text-[10px] top-[-0.5vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_6.png)] relative w-[100vw] h-[61vw]'}>*/}
-          {/*    <div className={'absolute left-[40.5vw] top-[3vw] w-[35vw] h-[30vw]'}>*/}
-          {/*        <Image src={'/images/shields.png'} layout={'fill'}></Image>*/}
-          {/*    </div>*/}
-          {/*    <h1 className={'absolute inline-block left-[41.3vw] top-[31vw] text-reon text-[8vw] font-title'}>CLAN WARS</h1>*/}
-          {/*    <h3 className={'text-center font-light absolute inline-block font-desc text-white bottom-[10.3vw] left-[30vw] leading-[123%] w-[54vw] text-[1.6vw]'}>Implemented a system of influence in the territory through the capture of outposts and cities during clan battles. Also clan fighters with a castle can help each other in battles, changing the course of battles in just 1-2 rounds</h3>*/}
-          {/*    <div className={'inline-block absolute left-[42vw] bottom-[6vw] w-[31.6vw] h-[2vw]'}><Image className={'rotate-180'} src={'/images/uzor.png'} layout={'fill'} /></div>*/}
-          {/*</div>*/}
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.6vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_7.png)] relative w-[100vw] h-[61vw]'}>
+              <div className={'absolute blur-shape inline-block left-[27.3vw] top-[10vw] rounded-[1.5vw] w-[63.9vw] h-[35.6vw]'}>
+              </div>
+              <h3 className={'font-light text-right absolute inline-block font-desc text-white right-[39.7vw] top-[6.6vw] leading-[118.5%] w-[33vw] text-[1.7vw]'}>The game implements a mechanism for sharpening things and modifying them with gems, which give an increase in one of the main characteristics of the character</h3>
+              <div className={'inline-block absolute w-[13vw] h-[13vw] right-[5.2vw] top-[4vw]'}>
+                  <Image src={'/images/craft_hammer.png'} layout={'fill'}></Image>
+              </div>
+              <h1 className={'absolute left-[64.4vw]  tracking-[0.035em] inline-block top-[3.3vw] text-reon text-[8vw] font-title'}>CRAFT</h1>
+              <div className={'absolute left-[32.5vw]  top-[19.8vw] w-[24.5vw] h-[28vw]'}>
+                  <div className={'mx-auto my-[5%] blur-shape rounded-[0.6vw] w-[80%] h-[92%] h-[7.5vw]'}>
+                  </div>
+                  <div className={'inline-block mx-[30%] top-[-4%] inline-block absolute w-[40%] h-[10%]'}>
+                      <Image src={'/images/uzor_white.svg'} layout={'fill'}></Image>
+                  </div>
+                  {/*<div className={'ml-[3%] mt-[7%] absolute w-[80%] h-[80%] top-0 left-0 '}>*/}
+                  {/*    <Image src={'/images/class1.png'} layout={'fill'}></Image>*/}
+                  {/*</div>*/}
+                  <div className={'inline-block mx-[30%] bottom-[-5%] rotate-180 inline-block absolute w-[40%] h-[10%]'}>
+                      <Image src={'/images/uzor_white.svg'} layout={'fill'}></Image>
+                  </div>
+              </div>
+              <div className={'absolute inline-block w-[6.3vw] h-[5vw] left-[56.2vw] top-[29.5vw]'}>
+                  <Image src={'/images/craft_arrow.svg'} layout={'fill'}></Image>
+              </div>
+              <div className={'absolute left-[61.7vw]  top-[19.8vw] w-[24.5vw] h-[28vw]'}>
+                  <div className={'mx-auto my-[5%] blur-shape rounded-[0.6vw] w-[80%] h-[92%] h-[7.5vw]'}>
+                  </div>
+                  <div className={'inline-block mx-[30%] top-[-4%] inline-block absolute w-[40%] h-[10%]'}>
+                      <Image src={'/images/uzor_white.svg'} layout={'fill'}></Image>
+                  </div>
+                  {/*<div className={'ml-[3%] mt-[7%] absolute w-[80%] h-[80%] top-0 left-0 '}>*/}
+                  {/*    <Image src={'/images/class1.png'} layout={'fill'}></Image>*/}
+                  {/*</div>*/}
+                  <div className={'inline-block mx-[30%] bottom-[-5%] rotate-180 inline-block absolute w-[40%] h-[10%]'}>
+                      <Image src={'/images/uzor_white.svg'} layout={'fill'}></Image>
+                  </div>
+              </div>
+          </div>
+
+          {/*MARKETPLACE*/}
+
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.7vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_8.png)] relative w-[100vw] h-[61vw]'}>
+              <h1 className={'absolute left-[26vw]  tracking-[0.035em] inline-block top-[5.2vw] text-reon text-[6.8vw] font-title'}>MARKETPLACE</h1>
+              <h3 className={'font-light text-left absolute inline-block font-desc text-white left-[26.2vw] top-[15.5vw] leading-[118.5%] w-[52vw] text-[1.64vw]'}>If you have a merchant's license, you can trade with other players for a minimal tax, or you can accept the game's standard commission for selling items.</h3>
+              <div className={'absolute left-[25.3vw] blur-shape rounded-[0.6vw] top-[24.2vw] w-[17.2vw] h-[23.5vw]'}>
+                  <div className={'absolute w-full h-full top-0 left-0 '}>
+                      <Image src={'/images/craft_blade.png'} layout={'fill'}></Image>
+                  </div>
+              </div>
+              <div className={'absolute left-[46.6vw] blur-shape rounded-[0.6vw] top-[24.2vw] w-[17.2vw] h-[23.5vw]'}>
+                  <div className={'absolute w-[17vw] mx-[0.1vw] h-[17vw] my-[10%] top-0 left-0 '}>
+                      <Image src={'/images/craft_shield.png'} layout={'fill'}></Image>
+                  </div>
+              </div>
+              <div className={'absolute left-[67.9vw] blur-shape rounded-[0.6vw] top-[24.2vw] w-[17.2vw] h-[23.5vw]'}>
+                  <div className={'absolute w-[17vw] mx-[0.1vw] h-[17vw] my-[20%]'}>
+                      <Image src={'/images/craft_axe.png'} layout={'fill'}></Image>
+                  </div>
+              </div>
+              <div className={'inline-block absolute w-[19.4vw] h-[33.6vw] right-0 bottom-0'}>
+                  <Image src={'/images/the_dwarf.png'} layout={'fill'}></Image>
+              </div>
+          </div>
+
+          {/*DONATE SYSTEM*/}
+
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.8vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_9.png)] relative w-[100vw] h-[61vw]'}>
+              <h1 className={'absolute inline-block right-[8.6vw] top-[11vw] text-reon text-[7vw] font-title'}>DONATE SYSTEM</h1>
+              <h3 className={'absolute inline-block font-[300] text-right font-desc text-white right-[10.4vw] top-[21.6vw] leading-[119%] w-[48vw] text-[1.63vw]'}>You can even start the game by buying a simple starter pack and saving up tokens for the right thing in the state store, or you can buy tokens on DEX and buy the best equipment for your level at once.<br/><br/>
+                  However, remember that the better equipment you are wearing, the higher your character rating and the less experience you will get for weaker players</h3>
+              <button className={'rounded-[1vw] absolute right-[10.5vw] h-[7vw] w-[37.6vw] top-[39.5vw] gold-button'}><h2 className={'button-text font-title tracking-[0.13em] text-[3.5vw]'}>BUY STARTER PACK</h2></button>
+              <div className={'absolute inline-block left-[8.2vw] bottom-0 w-[40vw] h-[34vw]'}>
+                  <Image src={'/images/donate_money.png'} layout={'fill'}></Image>
+              </div>
+          </div>
+
+          {/*RATING SYSTEM*/}
+
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.9vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_10.png)] relative w-[100vw] h-[61vw]'}>
+              <div className={'absolute border-2 blur-shape inline-block left-[30.4vw] top-[19.6vw] rounded-[1.5vw] w-[59vw] h-[32.7vw]'}>
+                  <div className={'h-full px-[2.5%]'}>
+                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                          <div className={'absolute w-[80%] h-[92%] bottom-[-1.2vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/bar9.png'} layout={'fill'}></Image>
+                          </div>
+                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[3.4vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/hero1.png'} layout={'fill'}></Image>
+                          </div>
+                          <h3 className={'absolute inline-block w-[40%] ml-[28%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>3</h3>
+                      </div>
+                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                          <div className={'absolute w-[80%] h-[77%] bottom-[-1.2vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/bar8.png'} layout={'fill'}></Image>
+                          </div>
+                          <h3 className={'absolute inline-block w-[40%] ml-[32%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>6</h3>
+                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[9vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/hero2.png'} layout={'fill'}></Image>
+                          </div>
+                      </div>
+                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                          <div className={'absolute w-[80%] h-[98%] bottom-[-1.2vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/bar7.png'} layout={'fill'}></Image>
+                          </div>
+                          <h3 className={'absolute inline-block w-[40%] ml-[28%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>2</h3>
+                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[3vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/hero3.png'} layout={'fill'}></Image>
+                          </div>
+                      </div>
+                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                          <div className={'absolute w-[80%] h-[54%] bottom-[-1.2vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/bar6.png'} layout={'fill'}></Image>
+                          </div>
+                          <h3 className={'absolute inline-block w-[40%] ml-[28%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>9</h3>
+                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[16vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/hero4.png'} layout={'fill'}></Image>
+                          </div>
+                      </div>
+                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                          <div className={'absolute w-[80%] h-[84%] bottom-[-1.2vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/bar5.png'} layout={'fill'}></Image>
+                          </div>
+                          <h3 className={'absolute inline-block w-[40%] ml-[28%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>5</h3>
+                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[7vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/hero5.png'} layout={'fill'}></Image>
+                          </div>
+                      </div>
+                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                          <div className={'absolute w-[80%] h-[75%] bottom-[-1.2vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/bar4.png'} layout={'fill'}></Image>
+                          </div>
+                          <h3 className={'absolute inline-block w-[40%] ml-[35%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>7</h3>
+                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[10vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/hero6.png'} layout={'fill'}></Image>
+                          </div>
+                      </div>
+                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                          <div className={'absolute w-[80%] h-[100%] bottom-[-1.2vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/bar3.png'} layout={'fill'}></Image>
+                          </div>
+                          <h3 className={'absolute inline-block w-[40%] ml-[35%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>1</h3>
+                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[1vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/hero7.png'} layout={'fill'}></Image>
+                          </div>
+                      </div>
+                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                          <div className={'absolute w-[80%] h-[64%] bottom-[-1.2vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/bar2.png'} layout={'fill'}></Image>
+                          </div>
+                          <h3 className={'absolute inline-block w-[40%] ml-[28%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>8</h3>
+                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[13vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/hero8.png'} layout={'fill'}></Image>
+                          </div>
+                      </div>
+                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                          <div className={'absolute w-[80%] h-[86%] bottom-[-1.2vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/bar1.png'} layout={'fill'}></Image>
+                          </div>
+                          <h3 className={'absolute inline-block w-[40%] ml-[30%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>4</h3>
+                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[6vw] mx-[10%]'}>
+                              <Image src={'/images/RatingScreen/hero9.png'} layout={'fill'}></Image>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <h3 className={'font-light text-left absolute inline-block font-desc text-white left-[54vw] top-[10.4vw] leading-[118.5%] w-[33vw] text-[1.5vw]'}>Rating is a unique system for GameFi projects that simultaneously balances the capabilities of whales and small players. </h3>
+              <h1 className={'absolute left-[31vw]  tracking-[0.035em] inline-block top-[7.6vw] text-reon text-[6.6vw] font-title'}>RATING</h1>
+              <div className={'w-[55vw] top-[53.6vw] left-[32.6vw] h-[2vw] absolute inline-block'}>
+                  <Image src={'/images/RatingScreen/rating_uzor.png'} layout={'fill'}></Image>
+              </div>
+          </div>
 
       </main>
 

@@ -120,3 +120,10 @@
     font-weight: 700;
     font-display: swap;
 }
+@font-face {
+    font-family: "Beer Money";
+    src: url("../public/fonts/Beer Money/beer money.ttf");
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}

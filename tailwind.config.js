@@ -8,6 +8,7 @@ module.exports = {
     fontFamily: {
       'title': ['Another Danger Slanted', 'system-ui'],
       'desc':['BioRhyme','sans-serif'],
+      'bars':['Beer Money','sans-serif'],
     },
     colors: {
       button: "#AA966B",
