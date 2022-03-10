@@ -225,7 +225,7 @@ const Home: NextPage = () => {
 
           <div className={'overflow-auto block bg-cover text-[10px] top-[-0.7vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_8.png)] relative w-[100vw] h-[61vw]'}>
               <h1 className={'absolute left-[26vw]  tracking-[0.035em] inline-block top-[5.2vw] text-reon text-[6.8vw] font-title'}>MARKETPLACE</h1>
-              <h3 className={'font-light text-left absolute inline-block font-desc text-white left-[26.2vw] top-[15.5vw] leading-[118.5%] w-[52vw] text-[1.64vw]'}>If you have a merchant's license, you can trade with other players for a minimal tax, or you can accept the game's standard commission for selling items.</h3>
+              <h3 className={'font-light text-left absolute inline-block font-desc text-white left-[26.2vw] top-[15.5vw] leading-[118.5%] w-[52vw] text-[1.64vw]'}>If you have a merchant`&apos;`s license, you can trade with other players for a minimal tax, or you can accept the game`&apos;`s standard commission for selling items.</h3>
               <div className={'absolute left-[25.3vw] blur-shape rounded-[0.6vw] top-[24.2vw] w-[17.2vw] h-[23.5vw]'}>
                   <div className={'absolute w-full h-full top-0 left-0 '}>
                       <Image src={'/images/craft_blade.png'} layout={'fill'}></Image>
