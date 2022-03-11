@@ -248,7 +248,7 @@ const Home: NextPage = () => {
 
           {/*DONATE SYSTEM*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.8vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_9.png)] relative w-[100vw] h-[61vw]'}>
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.9vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_9.png)] relative w-[100vw] h-[61vw]'}>
               <h1 className={'absolute inline-block right-[8.6vw] top-[11vw] text-reon text-[7vw] font-title'}>DONATE SYSTEM</h1>
               <h3 className={'absolute inline-block font-[300] text-right font-desc text-white right-[10.4vw] top-[21.6vw] leading-[119%] w-[48vw] text-[1.63vw]'}>You can even start the game by buying a simple starter pack and saving up tokens for the right thing in the state store, or you can buy tokens on DEX and buy the best equipment for your level at once.<br/><br/>
                   However, remember that the better equipment you are wearing, the higher your character rating and the less experience you will get for weaker players</h3>
@@ -260,8 +260,8 @@ const Home: NextPage = () => {
 
           {/*RATING SYSTEM*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.9vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_10.png)] relative w-[100vw] h-[61vw]'}>
-              <div className={'absolute border-2 blur-shape inline-block left-[30.4vw] top-[19.6vw] rounded-[1.5vw] w-[59vw] h-[32.7vw]'}>
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_10.png)] relative w-[100vw] h-[61vw]'}>
+              <div className={'absolute blur-shape inline-block left-[30.4vw] top-[19.6vw] rounded-[1.5vw] w-[59vw] h-[32.7vw]'}>
                   <div className={'h-full px-[2.5%]'}>
                       <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
                           <div className={'absolute w-[80%] h-[92%] bottom-[-1.2vw] mx-[10%]'}>
@@ -350,6 +350,184 @@ const Home: NextPage = () => {
               <h1 className={'absolute left-[31vw]  tracking-[0.035em] inline-block top-[7.6vw] text-reon text-[6.6vw] font-title'}>RATING</h1>
               <div className={'w-[55vw] top-[53.6vw] left-[32.6vw] h-[2vw] absolute inline-block'}>
                   <Image src={'/images/RatingScreen/rating_uzor.png'} layout={'fill'}></Image>
+              </div>
+          </div>
+
+          {/*ROAD MAP*/}
+
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-1.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_11.png)] relative w-[100vw] h-[61vw]'}>
+              <h1 className={'absolute inline-block left-[64vw] top-[7vw] text-reon text-[5.8vw] font-title'}>ROAD MAP</h1>
+              <div className={'absolute inline-block right-0 top-[5vw] w-[14vw] h-[19vw]'}>
+                  <Image src={'/images/kompas.png'} layout={'fill'}></Image>
+              </div>
+              <div className={'absolute inline-block left-[30vw] top-[13vw] w-[50vw] h-[40vw]'}>
+                  <Image src={'/images/roadmap_way.svg'} layout={'fill'}></Image>
+              </div>
+              <div className={'w-[17.5vw] rounded-[1vw] h-[13.7vw] left-[24.9vw] top-[10.5vw] inline-block relative blur-shape'}>
+                  <div className={'w-[4.2vw] h-[4.2vw] top-0 right-0 inline-block absolute'}>
+                      <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'w-[4.2vw] h-[4.2vw] rotate-180 bottom-0 left-0 inline-block absolute'}>
+                      <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'w-[11.4vw] h-[5vw] left-[-0.8vw] top-[1.3vw] absolute inline-block'}>
+                      <Image src={'/images/roadmap_shape.svg'} layout={'fill'}></Image>
+                      <p className={'font-desc mt-[5%] text-center bg-gold text-[2.04vw]'}>q4 2021</p>
+                  </div>
+                  <p className={'font-[400] w-[80%] mx-auto mt-[37%] font-desc block text-center text-[1.14vw] leading-[118.5%] text-white'}>Team building, Assets,
+                      Basic Concept development, Economics model</p>
+              </div>
+              <div className={'w-[18vw] rounded-[1vw] h-[14vw] left-[49.3vw] top-[17vw] inline-block absolute blur-shape'}>
+                  <div className={'w-[4.2vw] h-[4.2vw] top-0 right-0 inline-block absolute'}>
+                      <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'w-[4.2vw] h-[4.2vw] rotate-180 bottom-0 left-0 inline-block absolute'}>
+                      <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'w-[11.4vw] h-[5vw] left-[-0.8vw] top-[1.3vw] absolute inline-block'}>
+                      <Image src={'/images/roadmap_shape.svg'} layout={'fill'}></Image>
+                      <p className={'font-desc mt-[5%] text-center bg-gold text-[2.04vw]'}>q1 2022</p>
+                  </div>
+                  <p className={'font-[400] w-[80%] mx-auto mt-[37%] font-desc block text-center text-[1.14vw] leading-[118.5%] text-white'}>Public demo release, IDO launch on pinksale, Game release</p>
+              </div>
+              <div className={'w-[18vw] rounded-[1vw] h-[14vw] left-[26.4vw] top-[32vw] inline-block absolute blur-shape'}>
+                  <div className={'w-[4.2vw] h-[4.2vw] top-0 right-0 inline-block absolute'}>
+                      <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'w-[4.2vw] h-[4.2vw] rotate-180 bottom-0 left-0 inline-block absolute'}>
+                      <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'w-[11.4vw] h-[5vw] left-[-0.8vw] top-[1.3vw] absolute inline-block'}>
+                      <Image src={'/images/roadmap_shape.svg'} layout={'fill'}></Image>
+                      <p className={'font-desc mt-[5%] text-center bg-gold text-[2.04vw]'}>q2 2022</p>
+                  </div>
+                  <p className={'font-[400] w-[80%] mx-auto mt-[37%] font-desc block text-center text-[1.14vw] leading-[118.5%] text-white'}>Land market, Clan buildings, Clan wars, Gate.io listing</p>
+              </div>
+              <div className={'w-[18.5vw] rounded-[1vw] h-[13vw] left-[50.4vw] top-[37.7vw] inline-block absolute blur-shape'}>
+                  <div className={'w-[4.2vw] h-[4.2vw] top-0 right-0 inline-block absolute'}>
+                      <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'w-[4.2vw] h-[4.2vw] rotate-180 bottom-0 left-0 inline-block absolute'}>
+                      <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'w-[11.4vw] h-[5vw] left-[-0.8vw] top-[1.3vw] absolute inline-block'}>
+                      <Image src={'/images/roadmap_shape.svg'} layout={'fill'}></Image>
+                      <p className={'font-desc mt-[5%] text-center bg-gold text-[2.04vw]'}>q3 2022</p>
+                  </div>
+                  <p className={'font-[400] w-[75%] mx-auto mt-[37%] font-desc block text-center text-[1.14vw] leading-[118.5%] text-white'}>Championship of ReoN, Binance NFT avatar sale</p>
+              </div>
+              <div className={'w-[18.5vw] rounded-[1vw] h-[14.5vw] left-[71.4vw] top-[21.3vw] inline-block absolute blur-shape'}>
+                  <div className={'w-[4.2vw] h-[4.2vw] top-0 right-0 inline-block absolute'}>
+                      <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'w-[4.2vw] h-[4.2vw] rotate-180 bottom-0 left-0 inline-block absolute'}>
+                      <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'w-[11.4vw] h-[5vw] left-[-0.8vw] top-[1.3vw] absolute inline-block'}>
+                      <Image src={'/images/roadmap_shape.svg'} layout={'fill'}></Image>
+                      <p className={'font-desc mt-[5%] text-center bg-gold text-[2.04vw]'}>q4 2022</p>
+                  </div>
+                  <p className={'font-[400] w-[80%] mx-auto mt-[37%] font-desc block text-center text-[1.14vw] leading-[118.5%] text-white'}>Triple A game demo release, early access for NFT avatar owners, Academy of ReoN</p>
+              </div>
+          </div>
+
+          {/*TEAM*/}
+
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-1.2vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_12.png)] relative w-[100vw] h-[60vw]'}>
+              <h1 className={'absolute inline-block left-[50vw] top-[3vw] text-reon text-[8vw] font-title'}>TEAM</h1>
+              <div className={'absolute inline-block w-[8.3vw] top-[12vw] right-[14vw] h-[8.3vw]'}>
+                  <Image src={'/images/team_uzor.svg'} layout={'fill'}></Image>
+              </div>
+              <div className={'rotate-[-90deg] absolute inline-block w-[8.3vw] top-[12vw] left-[30.5vw] h-[8.3vw]'}>
+                  <Image src={'/images/team_uzor.svg'} layout={'fill'}></Image>
+              </div>
+              <div className={'flex-wrap justify-between flex w-[47.8vw] h-[35vw] top-[17vw] inline-block absolute left-[34vw]'}>
+                  <div className={'relative w-[29%] h-[45%]'}>
+                      <div className={'w-full absolute h-[90%] rounded-[1vw] bottom-0 blur-shape'}>
+                          <div className={'w-[6vw] h-[6vw] ml-[29%] top-[-10%] inline-block absolute'}>
+                              <Image src={'/images/RatingScreen/hero1.png'} layout={'fill'}></Image>
+                          </div>
+                          <h2 className={'mt-[40%] font-desc absolute block w-[100%] text-center bg-gold text-[2.04vw]'}>Name</h2>
+                          <h3 className={'mt-[65%] font-desc font-[300] text-white absolute block w-[100%] text-center text-[1.2vw]'}>position</h3>
+                      </div>
+                  </div>
+                  <div className={'relative w-[29%] h-[45%]'}>
+                      <div className={'w-full absolute h-[90%] rounded-[1vw] bottom-0 blur-shape'}>
+                          <div className={'w-[6vw] h-[6vw] ml-[29%] top-[-10%] inline-block absolute'}>
+                              <Image src={'/images/RatingScreen/hero1.png'} layout={'fill'}></Image>
+                          </div>
+                          <h2 className={'mt-[40%] font-desc absolute block w-[100%] text-center bg-gold text-[2.04vw]'}>Name</h2>
+                          <h3 className={'mt-[65%] font-desc font-[300] text-white absolute block w-[100%] text-center text-[1.2vw]'}>position</h3>
+                      </div>
+                  </div>
+                  <div className={'relative w-[29%] h-[45%]'}>
+                      <div className={'w-full absolute h-[90%] rounded-[1vw] bottom-0 blur-shape'}>
+                          <div className={'w-[6vw] h-[6vw] ml-[29%] top-[-10%] inline-block absolute'}>
+                              <Image src={'/images/RatingScreen/hero1.png'} layout={'fill'}></Image>
+                          </div>
+                          <h2 className={'mt-[40%] font-desc absolute block w-[100%] text-center bg-gold text-[2.04vw]'}>Name</h2>
+                          <h3 className={'mt-[65%] font-desc font-[300] text-white absolute block w-[100%] text-center text-[1.2vw]'}>position</h3>
+                      </div>
+                  </div>
+                  <div className={'relative w-[29%] h-[45%]'}>
+                      <div className={'w-full absolute h-[90%] rounded-[1vw] bottom-0 blur-shape'}>
+                          <div className={'w-[6vw] h-[6vw] ml-[29%] top-[-10%] inline-block absolute'}>
+                              <Image src={'/images/RatingScreen/hero1.png'} layout={'fill'}></Image>
+                          </div>
+                          <h2 className={'mt-[40%] font-desc absolute block w-[100%] text-center bg-gold text-[2.04vw]'}>Name</h2>
+                          <h3 className={'mt-[65%] font-desc font-[300] text-white absolute block w-[100%] text-center text-[1.2vw]'}>position</h3>
+                      </div>
+                  </div>
+                  <div className={'relative w-[29%] h-[45%]'}>
+                      <div className={'w-full absolute h-[90%] rounded-[1vw] bottom-0 blur-shape'}>
+                          <div className={'w-[6vw] h-[6vw] ml-[29%] top-[-10%] inline-block absolute'}>
+                              <Image src={'/images/RatingScreen/hero1.png'} layout={'fill'}></Image>
+                          </div>
+                          <h2 className={'mt-[40%] font-desc absolute block w-[100%] text-center bg-gold text-[2.04vw]'}>Name</h2>
+                          <h3 className={'mt-[65%] font-desc font-[300] text-white absolute block w-[100%] text-center text-[1.2vw]'}>position</h3>
+                      </div>
+                  </div>
+                  <div className={'relative w-[29%] h-[45%]'}>
+                      <div className={'w-full absolute h-[90%] rounded-[1vw] bottom-0 blur-shape'}>
+                          <div className={'w-[6vw] h-[6vw] ml-[29%] top-[-10%] inline-block absolute'}>
+                              <Image src={'/images/RatingScreen/hero1.png'} layout={'fill'}></Image>
+                          </div>
+                          <h2 className={'mt-[40%] font-desc absolute block w-[100%] text-center bg-gold text-[2.04vw]'}>Name</h2>
+                          <h3 className={'mt-[65%] font-desc font-[300] text-white absolute block w-[100%] text-center text-[1.2vw]'}>position</h3>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          {/*PARTNERS*/}
+
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-1.3vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_13.png)] relative w-[100vw] h-[57.5vw]'}>
+              <div className={'flex-wrap justify-between flex w-[68vw] h-[39vw] top-[12vw] inline-block absolute blur-shape left-[28vw]'}>
+                  <div className={'relative w-[17%] my-[6%] mx-[5%] h-[30%]'}>
+                      <Image src={'/images/partner_logo.jpg'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'relative w-[17%] my-[6%] mx-[5%] h-[30%]'}>
+                      <Image src={'/images/partner_logo.jpg'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'relative w-[17%] my-[6%] mx-[5%] h-[30%]'}>
+                      <Image src={'/images/partner_logo.jpg'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'relative w-[17%] my-[6%] mx-[5%] h-[30%]'}>
+                      <Image src={'/images/partner_logo.jpg'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'relative w-[17%] my-[6%] mx-[5%] h-[30%]'}>
+                      <Image src={'/images/partner_logo.jpg'} layout={'fill'}></Image>
+                  </div>
+                  <div className={'relative w-[17%] my-[6%] mx-[5%] h-[30%]'}>
+                      <Image src={'/images/partner_logo.jpg'} layout={'fill'}></Image>
+                  </div>
+              </div>
+              <h1 className={'absolute inline-block left-[49vw] top-[7vw] text-reon text-[6.4vw] font-title'}>PARTNERS</h1>
+              <div className={'w-[60vw] left-[32vw] top-[10.9vw] h-[2.4vw] absolute inline-block'}>
+                  <Image src={'/images/partner_uzor1.png'} layout={'fill'}></Image>
+              </div>
+              <div className={'w-[60vw] left-[32vw] top-[49.8vw] h-[2.4vw] absolute inline-block'}>
+                  <Image src={'/images/partner_uzor2.png'} layout={'fill'}></Image>
               </div>
           </div>
 
