@@ -33,6 +33,27 @@
     .shadow-shape{
         box-shadow: 0px 4.2561px 4.2561px rgba(0, 0, 0, 0.25);
     }
+    .navbar-item{
+        display: block;
+        font-family: BioRhyme;
+        color: white;
+        padding-left: 3.7vw;
+        font-size: 1.4vw;
+        margin-bottom: 0.7vw;
+        cursor: pointer;
+    }
+    .navbar-item.active{
+        background: url('../public/images/gold_texture.png');
+        color: transparent;
+        -webkit-background-clip: text;
+        background-size: cover;
+        background-position-y: center;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-size: 1.4vw;
+    }
+
 }
 
 @font-face {

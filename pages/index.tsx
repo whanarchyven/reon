@@ -6,6 +6,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import CenterMode from "../components/CenterSlider";
 import SimpleSlider from "../components/CenterSlider";
+import Navbar from "../components/Navbar"
+
 
 const Home: NextPage = () => {
     const settings = {
@@ -38,9 +40,11 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
 
+          <Navbar></Navbar>
+
           {/*INTRO*/}
 
-          <div className={' block bg-cover text-[10px] top-[0.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_1.png)] relative w-[100vw] h-[58vw]'}>
+          <div className={' block bg-cover text-[10px] top-[0.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_1.png)] relative w-[100vw] h-[58vw]'} id={'intro'}>
               <h1 className={'absolute inline-block left-[30vw] top-[20vw] text-reon text-[9vw] font-title'}><span className={'text-[12vw]'}>R</span>EO<span className={'text-[12vw]'}>N</span></h1>
               <h3 className={'absolute inline-block font-desc text-white left-[56vw] top-[26vw] leading-[123%] w-[27vw] text-[1.7vw]'}>From gamers and for gamers.
                   We promise you a new experience in GameFi</h3>
@@ -54,7 +58,7 @@ const Home: NextPage = () => {
 
           {/*ABOUT*/}
 
-          <div className={'block bg-cover text-[10px] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_2.png)] relative w-[100vw] h-[61vw]'}>
+          <div className={'block bg-cover text-[10px] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_2.png)] relative w-[100vw] h-[61vw]'} id={'about'}>
               <div className={'inline-block absolute right-0 top-[3.5vw] w-[20.4vw] h-[35.6vw]'}><Image src={'/images/sekira.png'} layout={'fill'} /></div>
               <h3 className={'absolute inline-block font-desc text-white left-[27.7vw] top-[8.2vw] leading-[127%] w-[38vw] text-[1.6vw]'}>ReoN is a turn-based PVP multiplayer RPG with a very detailed and elaborated internal and external economy. Immerse yourself in the ramified history of the world ReoN,
                   pump and develop your character, feel the atmosphere of clan confrontations and sharpen the coolest equipment on the server</h3>
@@ -106,7 +110,7 @@ const Home: NextPage = () => {
 
           {/*TEASER*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_3.png)] relative w-[100vw] h-[58vw]'}>
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_3.png)] relative w-[100vw] h-[58vw]'} id={'teaser'}>
               <h1 className={'tracking-[0.035em] absolute inline-block left-[51vw] top-[0vw] text-reon text-[6.3vw] font-title'}>TEASER</h1>
               <iframe className={'absolute left-[25.9vw] top-[12vw] w-[67vw] h-[38vw]'} src="https://www.youtube.com/embed/6ohYYtxfDCg"
                       title="YouTube video player" frameBorder="0"
@@ -116,13 +120,13 @@ const Home: NextPage = () => {
           </div>
 
           {/*RACES*/}
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.2vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_4.png)] relative w-[100vw] h-[61vw]'}>
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.2vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_4.png)] relative w-[100vw] h-[61vw]'} id={'races'}>
 
           </div>
 
           {/*CLASSES*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.4vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_5.png)] relative w-[100vw] h-[61vw]'}>
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.4vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_5.png)] relative w-[100vw] h-[61vw]'} id={'classes'}>
               <h1 className={'absolute right-[8vw]  tracking-[0.035em] inline-block top-[9.3vw] text-reon text-[7vw] font-title'}>CLASSES</h1>
               <h3 className={'font-light absolute inline-block font-desc text-white left-[26.7vw] top-[10.1vw] leading-[118.5%] w-[42vw] text-[1.45vw]'}>There are no common classes in the game. Each build is unique and you can adjust the stats for each specific case and fight. You can boost Crite and hit your opponents with x2 modifier, you can boost Dexterity and dodge almost all blows, you can boost Luck and specialize on block piercing or specialize on reaction and give damage in response to blocked blows.</h3>
               <div className={'rotate-[270deg] inline-block absolute w-[8vw] h-[8vw] right-[5.2vw] top-[13.4vw]'}>
@@ -171,7 +175,7 @@ const Home: NextPage = () => {
 
           {/*CLAN WARS*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.5vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_6.png)] relative w-[100vw] h-[61vw]'}>
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.5vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_6.png)] relative w-[100vw] h-[61vw]'} id={'clanwars'}>
               <div className={'absolute left-[40.5vw] top-[3vw] w-[35vw] h-[30vw]'}>
                   <Image src={'/images/shields.png'} layout={'fill'}></Image>
               </div>
@@ -182,7 +186,7 @@ const Home: NextPage = () => {
 
           {/*CRAFT*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.6vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_7.png)] relative w-[100vw] h-[61vw]'}>
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.6vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_7.png)] relative w-[100vw] h-[61vw]'} id={'craft'}>
               <div className={'absolute blur-shape inline-block left-[27.3vw] top-[10vw] rounded-[1.5vw] w-[63.9vw] h-[35.6vw]'}>
               </div>
               <h3 className={'font-light text-right absolute inline-block font-desc text-white right-[39.7vw] top-[6.6vw] leading-[118.5%] w-[33vw] text-[1.7vw]'}>The game implements a mechanism for sharpening things and modifying them with gems, which give an increase in one of the main characteristics of the character</h3>
@@ -223,7 +227,7 @@ const Home: NextPage = () => {
 
           {/*MARKETPLACE*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.7vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_8.png)] relative w-[100vw] h-[61vw]'}>
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.7vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_8.png)] relative w-[100vw] h-[61vw]'} id={'marketplace'}>
               <h1 className={'absolute left-[26vw]  tracking-[0.035em] inline-block top-[5.2vw] text-reon text-[6.8vw] font-title'}>MARKETPLACE</h1>
               <h3 className={'font-light text-left absolute inline-block font-desc text-white left-[26.2vw] top-[15.5vw] leading-[118.5%] w-[52vw] text-[1.64vw]'}>If you have a merchant`&apos;`s license, you can trade with other players for a minimal tax, or you can accept the game`&apos;`s standard commission for selling items.</h3>
               <div className={'absolute left-[25.3vw] blur-shape rounded-[0.6vw] top-[24.2vw] w-[17.2vw] h-[23.5vw]'}>
@@ -248,7 +252,7 @@ const Home: NextPage = () => {
 
           {/*DONATE SYSTEM*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.9vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_9.png)] relative w-[100vw] h-[61vw]'}>
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.9vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_9.png)] relative w-[100vw] h-[61vw]'} id={'donatesystem'}>
               <h1 className={'absolute inline-block right-[8.6vw] top-[11vw] text-reon text-[7vw] font-title'}>DONATE SYSTEM</h1>
               <h3 className={'absolute inline-block font-[300] text-right font-desc text-white right-[10.4vw] top-[21.6vw] leading-[119%] w-[48vw] text-[1.63vw]'}>You can even start the game by buying a simple starter pack and saving up tokens for the right thing in the state store, or you can buy tokens on DEX and buy the best equipment for your level at once.<br/><br/>
                   However, remember that the better equipment you are wearing, the higher your character rating and the less experience you will get for weaker players</h3>
@@ -260,7 +264,7 @@ const Home: NextPage = () => {
 
           {/*RATING SYSTEM*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_10.png)] relative w-[100vw] h-[61vw]'}>
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_10.png)] relative w-[100vw] h-[61vw]'} id={'rating'}>
               <div className={'absolute blur-shape inline-block left-[30.4vw] top-[19.6vw] rounded-[1.5vw] w-[59vw] h-[32.7vw]'}>
                   <div className={'h-full px-[2.5%]'}>
                       <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
@@ -355,7 +359,7 @@ const Home: NextPage = () => {
 
           {/*ROAD MAP*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-1.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_11.png)] relative w-[100vw] h-[61vw]'}>
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-1.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_map.png)] relative w-[100vw] h-[61vw]'} id={'roadmap'}>
               <h1 className={'absolute inline-block left-[64vw] top-[7vw] text-reon text-[5.8vw] font-title'}>ROAD MAP</h1>
               <div className={'absolute inline-block right-0 top-[5vw] w-[14vw] h-[19vw]'}>
                   <Image src={'/images/kompas.png'} layout={'fill'}></Image>
@@ -433,7 +437,7 @@ const Home: NextPage = () => {
 
           {/*TEAM*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-1.2vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_12.png)] relative w-[100vw] h-[60vw]'}>
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-1.2vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_12.png)] relative w-[100vw] h-[60vw]'} id={'team'}>
               <h1 className={'absolute inline-block left-[50vw] top-[3vw] text-reon text-[8vw] font-title'}>TEAM</h1>
               <div className={'absolute inline-block w-[8.3vw] top-[12vw] right-[14vw] h-[8.3vw]'}>
                   <Image src={'/images/team_uzor.svg'} layout={'fill'}></Image>
@@ -501,7 +505,7 @@ const Home: NextPage = () => {
 
           {/*PARTNERS*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-1.3vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_13.png)] relative w-[100vw] h-[57.5vw]'}>
+          <div className={'overflow-auto block bg-cover text-[10px] top-[-1.3vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_13.png)] relative w-[100vw] h-[57.5vw]'} id={'partners'}>
               <div className={'flex-wrap justify-between flex w-[68vw] h-[39vw] top-[12vw] inline-block absolute blur-shape left-[28vw]'}>
                   <div className={'relative w-[17%] my-[6%] mx-[5%] h-[30%]'}>
                       <Image src={'/images/partner_logo.jpg'} layout={'fill'}></Image>
