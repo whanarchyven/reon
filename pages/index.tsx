@@ -7,6 +7,7 @@ import styles from '../styles/Home.module.css'
 import CenterMode from "../components/CenterSlider";
 import SimpleSlider from "../components/CenterSlider";
 import Navbar from "../components/Navbar"
+import CenterSlider from "../components/CenterSlider";
 
 
 const Home: NextPage = () => {
@@ -108,20 +109,22 @@ const Home: NextPage = () => {
               </div>
           </div>
 
-          {/*TEASER*/}
+          {/*/!*TEASER*!/*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_3.png)] relative w-[100vw] h-[58vw]'} id={'teaser'}>
-              <h1 className={'tracking-[0.035em] absolute inline-block left-[51vw] top-[0vw] text-reon text-[6.3vw] font-title'}>TEASER</h1>
-              <iframe className={'absolute left-[25.9vw] top-[12vw] w-[67vw] h-[38vw]'} src="https://www.youtube.com/embed/6ohYYtxfDCg"
-                      title="YouTube video player" frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen>
-              </iframe>
-          </div>
+          {/*<div className={'overflow-auto block bg-cover text-[10px] top-[-0.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_3.png)] relative w-[100vw] h-[58vw]'} id={'teaser'}>*/}
+          {/*    <h1 className={'tracking-[0.035em] absolute inline-block left-[51vw] top-[0vw] text-reon text-[6.3vw] font-title'}>TEASER</h1>*/}
+          {/*    <iframe className={'absolute left-[25.9vw] top-[12vw] w-[67vw] h-[38vw]'} src="https://www.youtube.com/embed/6ohYYtxfDCg"*/}
+          {/*            title="YouTube video player" frameBorder="0"*/}
+          {/*            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"*/}
+          {/*            allowFullScreen>*/}
+          {/*    </iframe>*/}
+          {/*</div>*/}
 
           {/*RACES*/}
           <div className={'overflow-auto block bg-cover text-[10px] top-[-0.2vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_4.png)] relative w-[100vw] h-[61vw]'} id={'races'}>
-
+              <CenterSlider></CenterSlider>
+              <h1 className={'absolute left-[26vw] tracking-[0.035em] inline-block bottom-[6vw] text-reon text-[7.5vw] font-title'}>RACES</h1>
+              <h3 className={'font-light absolute inline-block font-desc text-white left-[48.35vw] top-[45.2vw] leading-[118.5%] w-[42vw] text-[1.56vw]'}>The game features 5 races, each with distinctive bonuses and abilities. Orcs with level up get a bonus to crits, elves to dexterity, humans to strength, dwarves to luck, hobbits to reaction. Depending on the chosen class race makes a huge difference</h3>
           </div>
 
           {/*CLASSES*/}

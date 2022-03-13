@@ -30,19 +30,19 @@ export default class Navbar extends Component {
                     <Image src={'/images/mail_button.png'} layout={'fill'}></Image>
                 </div>
                 <nav className={'absolute top-[5vw]'}>
-                    <Link spy={true} smooth={true} offset={-130} duration= {500} activeClass={"active"} className={'navbar-item'} to={'intro'}>Intro</Link>
-                    <Link spy={true} smooth={true} offset={-130} duration= {500} activeClass={"active"} className={'navbar-item'} to={'about'}>About</Link>
-                    <Link spy={true} smooth={true} offset={-130} duration= {500} activeClass={"active"} className={'navbar-item'} to={'teaser'}>Teaser</Link>
-                    <Link spy={true} smooth={true} offset={-130} duration= {500} activeClass={"active"} className={'navbar-item'} to={'races'}>Races</Link>
-                    <Link spy={true} smooth={true} offset={-130} duration= {500} activeClass={"active"} className={'navbar-item'} to={'classes'}>Classes</Link>
-                    <Link spy={true} smooth={true} offset={-130} duration= {500} activeClass={"active"} className={'navbar-item'} to={'clanwars'}>Clan wars</Link>
-                    <Link spy={true} smooth={true} offset={-130} duration= {500} activeClass={"active"} className={'navbar-item'} to={'craft'}>Craft</Link>
-                    <Link spy={true} smooth={true} offset={-130} duration= {500} activeClass={"active"} className={'navbar-item'} to={'marketplace'}>Marketplace</Link>
-                    <Link spy={true} smooth={true} offset={-130} duration= {500} activeClass={"active"} className={'navbar-item'} to={'donatesystem'}>Donate System</Link>
-                    <Link spy={true} smooth={true} offset={-130} duration= {500} activeClass={"active"} className={'navbar-item'} to={'rating'}>Rating</Link>
-                    <Link spy={true} smooth={true} offset={-130} duration= {500} activeClass={"active"} className={'navbar-item'} to={'roadmap'}>Roadmap</Link>
-                    <Link spy={true} smooth={true} offset={-130} duration= {500} activeClass={"active"} className={'navbar-item'} to={'gameflow'}>Gameflow</Link>
-                    <Link spy={true} smooth={true} offset={-130} duration= {500} activeClass={"active"} className={'navbar-item'} to={'docs'}>Docs</Link>
+                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'intro'}>Intro</Link>
+                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'about'}>About</Link>
+                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'teaser'}>Teaser</Link>
+                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'races'}>Races</Link>
+                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'classes'}>Classes</Link>
+                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'clanwars'}>Clan wars</Link>
+                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'craft'}>Craft</Link>
+                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'marketplace'}>Marketplace</Link>
+                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'donatesystem'}>Donate System</Link>
+                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'rating'}>Rating</Link>
+                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'roadmap'}>Roadmap</Link>
+                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'gameflow'}>Gameflow</Link>
+                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'docs'}>Docs</Link>
                 </nav>
             </div>
         );
