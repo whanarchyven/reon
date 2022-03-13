@@ -46,6 +46,22 @@ const Home: NextPage = () => {
           {/*INTRO*/}
 
           <div className={' block bg-cover text-[10px] top-[0.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_1.png)] relative w-[100vw] h-[58vw]'} id={'intro'}>
+              <video
+                  id="background-video"
+                  loop
+                  autoPlay
+                  muted
+                  style={{
+                      position: "relative",
+                      width: "100vw",
+                      height: "119vw",
+                      left: 0,
+                      top: 0,
+                  }} className={'relative w-[100vw] h-[58vw]'}
+              >
+                  <source src={'/images/background.mp4'} type="video/mp4" />
+                  Your browser does not support the video tag.
+              </video>
               <h1 className={'absolute inline-block left-[30vw] top-[20vw] text-reon text-[9vw] font-title'}><span className={'text-[12vw]'}>R</span>EO<span className={'text-[12vw]'}>N</span></h1>
               <h3 className={'absolute inline-block font-desc text-white left-[56vw] top-[26vw] leading-[123%] w-[27vw] text-[1.7vw]'}>From gamers and for gamers.
                   We promise you a new experience in GameFi</h3>

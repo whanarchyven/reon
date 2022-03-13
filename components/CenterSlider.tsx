@@ -9,6 +9,7 @@ import 'swiper/css/scrollbar';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import Image from "next/image";
 import SlidePrevButton from "./SlidePrevButton";
+// @ts-ignore
 import SlideNextButton from "./SlideNextButton";
 
 
