@@ -11,9 +11,10 @@ import Image from "next/image";
 import SlidePrevButton from "./SlidePrevButton";
 // @ts-ignore
 import SlideNextButton from "./SlideNextButton";
+import {Component} from "react";
 
 
-export default () => {
+export default function CenterSlider() {
     const swiper = useSwiper();
     return (
         <Swiper
