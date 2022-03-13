@@ -8,6 +8,7 @@ import CenterMode from "../components/CenterSlider";
 import SimpleSlider from "../components/CenterSlider";
 import Navbar from "../components/Navbar"
 import CenterSlider from "../components/CenterSlider";
+import { motion } from 'framer-motion';
 
 
 const Home: NextPage = () => {
@@ -62,13 +63,91 @@ const Home: NextPage = () => {
                   <source src={'/images/background.mp4'} type="video/mp4" />
                   Your browser does not support the video tag.
               </video>
-              <h1 className={'absolute inline-block left-[30vw] top-[20vw] text-reon text-[9vw] font-title'}><span className={'text-[12vw]'}>R</span>EO<span className={'text-[12vw]'}>N</span></h1>
-              <h3 className={'absolute inline-block font-desc text-white left-[56vw] top-[26vw] leading-[123%] w-[27vw] text-[1.7vw]'}>From gamers and for gamers.
-                  We promise you a new experience in GameFi</h3>
-              <h3 className={'absolute inline-block tracking-[0.13em] font-title text-white text-center left-[34.3vw] top-[34vw] leading-[123%] w-[42vw] text-[2.75vw]'}>Reincarnation of nation</h3>
-              <div className={'inline-block relative left-[23.8vw] top-[39.3vw] w-[21.7vw] h-[5.8vw]'}><Image src={'/images/blade.png'} layout={'fill'} /></div>
-              <div className={'inline-block relative left-[40.4vw] top-[39.3vw] w-[21.7vw] h-[5.8vw]'}><Image className={'rotate-180'} src={'/images/blade.png'} layout={'fill'} /></div>
-              <button className={'rounded-[1vw] absolute left-[39.6vw] h-[7.2vw] w-[29.2vw] top-[39vw] gold-button'}><h2 className={'button-text font-title tracking-[0.13em] text-[3.5vw]'}>LEARN MORE</h2></button>
+              <motion.div className={'absolute top-0'} initial={'hidden'} animate={'visible'} variants={{
+                  'hidden': {
+                      opacity: 0
+                  },
+                  'visible': {
+                      opacity: 1,
+                      transition: {
+                          delay: .4,
+                          duration:1,
+                      },
+                  },
+              }}><h1 className={'absolute inline-block left-[30vw] top-[20vw] text-reon text-[9vw] font-title'}><span className={'text-[12vw]'}>R</span>EO<span className={'text-[12vw]'}>N</span></h1></motion.div>
+              <motion.div className={'absolute top-0'} initial={'hidden'} animate={'visible'} variants={{
+                  'hidden':{
+                      opacity:0,
+                      x:-100,
+                  },
+                  'visible':{
+                      opacity:1,
+                      x:0,
+                      transition:{
+                          delay:1,
+                          duration:1,
+                      }
+                  }
+              }}><h3 className={'absolute inline-block font-desc text-white left-[56vw] top-[26vw] leading-[123%] w-[27vw] text-[1.7vw]'}>From gamers and for gamers.
+                  We promise you a new experience in GameFi</h3></motion.div>
+              <motion.div className={'absolute top-0'} initial={'hidden'} animate={'visible'} variants={{
+                  'hidden':{
+                      opacity:0,
+                      y:-50,
+                  },
+                  'visible':{
+                      opacity:1,
+                      y:0,
+                      transition:{
+                          delay:1.5,
+                          ease:'easeIn',
+                          duration:1,
+                      }
+                  }
+              }}><h3 className={'absolute inline-block tracking-[0.13em] font-title text-white text-center left-[34.3vw] top-[34vw] leading-[123%] w-[42vw] text-[2.75vw]'}>Reincarnation of nation</h3></motion.div>
+              <motion.div className={'absolute top-0'} initial={'hidden'} animate={'visible'} variants={{
+                  'hidden':{
+                      opacity:0,
+                      x:-100,
+                  },
+                  'visible':{
+                      opacity:1,
+                      x:0,
+                      transition:{
+                          delay:2.8,
+                          ease:'easeInOut',
+                          duration:0.7,
+                      }
+                  }
+              }}><div className={'inline-block absolute left-[23.8vw] top-[39.3vw] w-[21.7vw] h-[5.8vw]'}><Image src={'/images/blade.png'} layout={'fill'} /></div></motion.div>
+              <motion.div className={'absolute top-0'} initial={'hidden'} animate={'visible'} variants={{
+                  'hidden':{
+                      opacity:0,
+                      x:100,
+                  },
+                  'visible':{
+                      opacity:1,
+                      x:0,
+                      transition:{
+                          delay:2.8,
+                          ease:'easeInOut',
+                          duration:0.7,
+                      }
+                  }
+              }}><div className={'inline-block absolute left-[63.4vw] top-[39.3vw] w-[21.7vw] h-[5.8vw]'}><Image className={'rotate-180'} src={'/images/blade.png'} layout={'fill'} /></div></motion.div>
+              <motion.div className={'absolute top-0'} initial={'hidden'} animate={'visible'} variants={{
+                  'hidden':{
+                      opacity:0,
+                  },
+                  'visible':{
+                      opacity:1,
+                      transition:{
+                          delay:2.5,
+                          ease:'circIn',
+                          duration:0.3,
+                      }
+                  }
+              }}><button className={'rounded-[1vw] inline-block absolute left-[39.6vw] h-[7.2vw] w-[29.2vw] top-[39vw] gold-button'}><h2 className={'button-text font-title tracking-[0.13em] text-[3.5vw]'}>LEARN MORE</h2></button></motion.div>
               <div className={'inline-block absolute left-[37.7vw] bottom-[1vw] w-[31.6vw] h-[2vw]'}><Image className={'rotate-180'} src={'/images/uzor.png'} layout={'fill'} /></div>
           </div>
 
