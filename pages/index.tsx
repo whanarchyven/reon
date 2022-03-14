@@ -155,53 +155,198 @@ const Home: NextPage = () => {
           {/*ABOUT*/}
 
           <div className={'block bg-cover text-[10px] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_2.png)] relative w-[100vw] h-[61vw]'} id={'about'}>
-              <div className={'inline-block absolute right-0 top-[3.5vw] w-[20.4vw] h-[35.6vw]'}><Image src={'/images/sekira.png'} layout={'fill'} /></div>
-              <h3 className={'absolute inline-block font-desc text-white left-[27.7vw] top-[8.2vw] leading-[127%] w-[38vw] text-[1.6vw]'}>ReoN is a turn-based PVP multiplayer RPG with a very detailed and elaborated internal and external economy. Immerse yourself in the ramified history of the world ReoN,
-                  pump and develop your character, feel the atmosphere of clan confrontations and sharpen the coolest equipment on the server</h3>
-              <h1 className={'absolute inline-block right-[12.6vw] top-[6.7vw] text-reon text-[9.6vw] font-title'}>ABOUT</h1>
-              <div className={'inline-block absolute w-[8vw] h-[8vw] left-[25vw] top-[18vw]'}>
+
+
+              <motion.div className={'absolute left-0 top-0'} initial="hidden" whileInView={'visible'} viewport={{once:true}} transition={{ duration: 1, delay:0.5, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale: 1, x:0,},
+                              hidden: { opacity: 0, scale: 1, x:400,}
+                          }}><div className={'inline-block absolute left-[80vw] top-[3.5vw] w-[20.4vw] h-[35.6vw]'}><Image src={'/images/sekira.png'} layout={'fill'} /></div></motion.div>
+
+
+              <motion.div className={'absolute left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 0.9, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale: 1,y:0 },
+                              hidden: { opacity: 0, scale: 1,y:50 }
+                          }}><h3 className={'absolute inline-block font-desc text-white left-[27.7vw] top-[8.2vw] leading-[127%] w-[38vw] text-[1.6vw]'}>ReoN is a turn-based PVP multiplayer RPG with a very detailed and elaborated internal and external economy. Immerse yourself in the ramified history of the world ReoN,
+                  pump and develop your character, feel the atmosphere of clan confrontations and sharpen the coolest equipment on the server</h3></motion.div>
+              <motion.div className={'absolute left-0-0 top-0'} initial="hidden" whileInView={'visible'} viewport={{once:true}} transition={{ duration: 0.9, delay:0.3, ease:'easeIn'}}
+                          variants={{
+                              visible: { opacity: 1, scaleY: 1 },
+                              hidden: { opacity: 0, scaleY: 0.8 }
+                          }}><h1 className={'absolute inline-block left-[65.6vw] top-[6.7vw] text-reon text-[9.6vw] font-title'}>ABOUT</h1></motion.div>
+
+
+              <motion.div className={'absolute left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 0.9, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale: 1,y:0 },
+                              hidden: { opacity: 0, scale: 1,y:50 }
+                          }}><div className={'inline-block absolute w-[8vw] h-[8vw] left-[25vw] top-[18vw]'}>
                   <Image src={'/images/goldframe.svg'} layout={'fill'}></Image>
-              </div>
-              <div className={'absolute blur-shape rounded-[0.4vw] left-[23vw] top-[32.4vw] w-[22.8vw] h-[7.5vw]'}>
+              </div></motion.div>
+
+
+              <motion.div className={'absolute left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.6, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: -50 }
+                          }}><div className={'absolute blur-shape rounded-[0.4vw] left-[23vw] top-[32.4vw] w-[22.8vw] h-[7.5vw]'}>
                   <p className={'z-40 text-[1.4vw] text-center p-[1.7vw] absolute top-0 text-white font-desc font-light'}>Purchase the starter pack with characters and items</p>
                   {/*<Image src={'/images/AboutScreenShapes/1.svg'} layout={'fill'} className={'absolute top-0 blur-shape absolute w-full h-full'}>*/}
                   {/*</Image>*/}
-              </div>
-              <div className={'inline-block absolute w-[2.7vw] h-[2vw] left-[45.8vw] top-[35.1vw] z-40'}>
+              </div></motion.div>
+
+
+              <motion.div className={'absolute left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 0.9, delay:0.4, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: -50 }
+                          }}><div className={'inline-block absolute w-[2.7vw] h-[2vw] left-[45.8vw] top-[35.1vw] z-40'}>
                   <Image src={'/images/arrow_horizontal.svg'} layout={'fill'}></Image>
-              </div>
-              <div className={'absolute blur-shape rounded-[0.4vw] left-[48.3vw] top-[32.4vw] w-[19.6vw] h-[7.5vw]'}>
+              </div></motion.div>
+
+
+              <motion.div className={'absolute left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 0.9, delay:0.9, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: -50 }
+                          }}><div className={'absolute blur-shape rounded-[0.4vw] left-[48.3vw] top-[32.4vw] w-[19.6vw] h-[7.5vw]'}>
                   <p className={'z-40 text-[1.4vw] text-center p-[1.7vw] absolute top-0 text-white font-desc font-light'}>Earn experience and token in battles</p>
                   {/*<Image src={'/images/AboutScreenShapes/2.svg'} layout={'fill'} className={'absolute top-0 blur-shape absolute w-full h-full'}></Image>*/}
-              </div>
-              <div className={'inline-block absolute w-[2.7vw] h-[2vw] left-[67.9vw] top-[36vw] z-40'}>
+              </div></motion.div>
+
+
+
+              <motion.div className={'absolute left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 0.9, delay:0.9, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: -50 }
+                          }}><div className={'inline-block absolute w-[2.7vw] h-[2vw] left-[67.9vw] top-[36vw] z-40'}>
                   <Image src={'/images/arrow_horizontal.svg'} layout={'fill'}></Image>
-              </div>
-              <div className={'absolute blur-shape rounded-[0.4vw] right-[4.2vw] top-[32.7vw] w-[25.6vw] h-[7.5vw]'}>
+              </div></motion.div>
+
+
+              <motion.div className={'absolute left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 0.9, delay:1.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: -50 }
+                          }}>
+              <div className={'absolute blur-shape rounded-[0.4vw] left-[70.2vw] top-[32.7vw] w-[25.6vw] h-[7.5vw]'}>
                   <p className={'z-40 text-[1.4vw] text-center p-[1.7vw] absolute top-0 text-white font-desc font-light'}>Upgrade your equipment and buy more powerful items</p>
                   {/*<Image src={'/images/AboutScreenShapes/3.svg'} layout={'fill'} className={'absolute top-0 blur-shape absolute w-full h-full'}></Image>*/}
-              </div>
-              <div className={'inline-block absolute w-[2.7vw] h-[3vw] right-[10.3vw] top-[40vw] z-40'}>
+              </div></motion.div>
+
+
+              <motion.div className={'absolute left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 0.9, delay:1.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: -50 }
+                          }}><div className={'inline-block absolute w-[2.7vw] h-[3vw] left-[87vw] top-[40vw] z-40'}>
                   <Image src={'/images/arrow_vertical.svg'} layout={'fill'}></Image>
-              </div>
-              <div className={'absolute blur-shape rounded-[0.4vw] right-[4.2vw] top-[43vw] w-[25.3vw] h-[9.5vw]'}>
+              </div></motion.div>
+
+
+              <motion.div className={'absolute inline-block left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 0.9, delay:1.6, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: -50 }
+                          }}>
+              <div className={'absolute blur-shape rounded-[0.4vw] left-[70.5vw] top-[43vw] w-[25.3vw] h-[9.5vw]'}>
                   <p className={'z-40 text-[1.4vw] text-center p-[1.7vw] absolute top-0 text-white font-desc font-light'}>Create a clan, build a castle to make an experience boost and other opportunites</p>
                   {/*<Image src={'/images/AboutScreenShapes/3.svg'} layout={'fill'} className={'absolute top-0 blur-shape absolute w-full h-full'}></Image>*/}
-              </div>
+              </div></motion.div>
+
+              <motion.div className={'absolute inline-block left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 0.9, delay:1.6, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: -50 }
+                          }}>
               <div className={'rotate-180 inline-block absolute w-[2.7vw] h-[2vw] left-[67.9vw] top-[46.2vw] z-40'}>
                   <Image src={'/images/arrow_horizontal.svg'} layout={'fill'}></Image>
-              </div>
-              <div className={'absolute blur-shape rounded-[0.4vw] right-[32vw] top-[44.5vw] w-[19.7vw] h-[7.4vw]'}>
+              </div></motion.div>
+
+
+              <motion.div className={'absolute inline-block left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 0.9, delay:1.9, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: -50 }
+                          }}>
+              <div className={'absolute blur-shape rounded-[0.4vw] left-[48.3vw] top-[44.5vw] w-[19.7vw] h-[7.4vw]'}>
                   <p className={'z-40 text-[1.4vw] text-center p-[1.7vw] absolute top-0 text-white font-desc font-light'}>Trade equipment and tokens in the market</p>
                   {/*<Image src={'/images/AboutScreenShapes/3.svg'} layout={'fill'} className={'absolute top-0 blur-shape absolute w-full h-full'}></Image>*/}
-              </div>
+              </div></motion.div>
+
+              <motion.div className={'absolute inline-block left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 0.9, delay:1.9, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: -50 }
+                          }}>
               <div className={'rotate-180 inline-block absolute w-[2.8vw] h-[2vw] left-[45.5vw] top-[47.4vw] z-40'}>
                   <Image src={'/images/arrow_horizontal.svg'} layout={'fill'}></Image>
-              </div>
-              <div className={'absolute blur-shape rounded-[0.4vw] left-[23vw] top-[43.2vw] w-[22.8vw] h-[9.4vw]'}>
+              </div></motion.div>
+
+
+              <motion.div className={'absolute inline-block left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 0.9, delay:2.2, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: -50 }
+                          }}><div className={'absolute blur-shape rounded-[0.4vw] left-[23vw] top-[43.2vw] w-[22.8vw] h-[9.4vw]'}>
                   <p className={'z-40 text-[1.4vw] text-center p-[1.7vw] absolute top-0 text-white font-desc font-light'}>Have fun and real Play-to-earn. No staking. No farming. Just gaming.</p>
                   {/*<Image src={'/images/AboutScreenShapes/3.svg'} layout={'fill'} className={'absolute top-0 blur-shape absolute w-full h-full'}></Image>*/}
-              </div>
+              </div></motion.div>
+
+
           </div>
 
           {/*/!*TEASER*!/*/}
@@ -217,20 +362,96 @@ const Home: NextPage = () => {
 
           {/*RACES*/}
           <div className={'overflow-auto block bg-cover text-[10px] top-[-0.2vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_4.png)] relative w-[100vw] h-[61vw]'} id={'races'}>
-              <CenterSlider></CenterSlider>
-              <h1 className={'absolute left-[26vw] tracking-[0.035em] inline-block bottom-[6vw] text-reon text-[7.5vw] font-title'}>RACES</h1>
-              <h3 className={'font-light absolute inline-block font-desc text-white left-[48.35vw] top-[45.2vw] leading-[118.5%] w-[42vw] text-[1.56vw]'}>The game features 5 races, each with distinctive bonuses and abilities. Orcs with level up get a bonus to crits, elves to dexterity, humans to strength, dwarves to luck, hobbits to reaction. Depending on the chosen class race makes a huge difference</h3>
+
+              <motion.div className={'absolute inline-block left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: 100 }
+                          }}>
+                  <CenterSlider></CenterSlider></motion.div>
+
+
+              <motion.div className={'absolute inline-block left-0 bottom-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, x:0 },
+                              hidden: { opacity: 0, x: 100 }
+                          }}>
+                  <h1 className={'absolute left-[26vw] tracking-[0.035em] inline-block bottom-[6vw] text-reon text-[7.5vw] font-title'}>RACES</h1></motion.div>
+
+              <motion.div className={'absolute inline-block left-0 bottom-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, x:0 },
+                              hidden: { opacity: 0, x: 100 }
+                          }}>
+              <h3 className={'font-light absolute inline-block font-desc text-white left-[48.35vw] bottom-[6.2vw] leading-[118.5%] w-[42vw] text-[1.56vw]'}>The game features 5 races, each with distinctive bonuses and abilities. Orcs with level up get a bonus to crits, elves to dexterity, humans to strength, dwarves to luck, hobbits to reaction. Depending on the chosen class race makes a huge difference</h3>
+              </motion.div>
+
+
           </div>
 
           {/*CLASSES*/}
 
           <div className={'overflow-auto block bg-cover text-[10px] top-[-0.4vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_5.png)] relative w-[100vw] h-[61vw]'} id={'classes'}>
-              <h1 className={'absolute right-[8vw]  tracking-[0.035em] inline-block top-[9.3vw] text-reon text-[7vw] font-title'}>CLASSES</h1>
+
+              <motion.div className={'absolute inline-block left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: 100 }
+                          }}>
+                  <h1 className={'absolute left-[69vw]  tracking-[0.035em] inline-block top-[9.3vw] text-reon text-[7vw] font-title'}>CLASSES</h1></motion.div>
+
+              <motion.div className={'absolute inline-block left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: 100 }
+                          }}>
               <h3 className={'font-light absolute inline-block font-desc text-white left-[26.7vw] top-[10.1vw] leading-[118.5%] w-[42vw] text-[1.45vw]'}>There are no common classes in the game. Each build is unique and you can adjust the stats for each specific case and fight. You can boost Crite and hit your opponents with x2 modifier, you can boost Dexterity and dodge almost all blows, you can boost Luck and specialize on block piercing or specialize on reaction and give damage in response to blocked blows.</h3>
-              <div className={'rotate-[270deg] inline-block absolute w-[8vw] h-[8vw] right-[5.2vw] top-[13.4vw]'}>
+              </motion.div>
+
+              <motion.div className={'absolute inline-block left-0 top-0'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: 100 }
+                          }}>
+              <div className={'rotate-[270deg] inline-block absolute w-[8vw] h-[8vw] left-[86.9vw] top-[13.4vw]'}>
                   <Image src={'/images/goldframe.svg'} layout={'fill'}></Image>
               </div>
-              <div className={'absolute left-[29vw]  top-[29.6vw] w-[19.6vw] h-[25vw]'}>
+              </motion.div>
+
+              <motion.div className={'absolute left-[29vw] top-[29.6vw] '} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, x:0 },
+                              hidden: { opacity: 0, x: -100 }
+                          }}>
+              <div className={'w-[19.6vw] h-[25vw]'}>
                   <div className={'mx-auto my-[5%] blur-shape rounded-[0.6vw] w-[80%] h-[92%] h-[7.5vw]'}>
                   </div>
                   <div className={'inline-block mx-[30%] top-[-3%] inline-block absolute w-[40%] h-[10%]'}>
@@ -242,8 +463,18 @@ const Home: NextPage = () => {
                   <div className={'inline-block mx-[30%] bottom-[-3%] rotate-180 inline-block absolute w-[40%] h-[10%]'}>
                      <Image src={'/images/class_uzor.svg'} layout={'fill'}></Image>
                   </div>
-              </div>
-              <div className={'absolute left-[47vw]  top-[26.3vw] w-[24vw] h-[31vw]'}>
+              </div></motion.div>
+
+              <motion.div className={'absolute left-[47vw]  top-[26.3vw]  '} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.6, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, x:0 },
+                              hidden: { opacity: 0, x: -100 }
+                          }}>
+              <div className={'w-[24vw] h-[31vw]'}>
                   <div className={'mx-auto my-[5%] blur-shape rounded-[0.6vw] w-[80%] h-[92%] h-[7.5vw]'}>
                   </div>
                   <div className={'inline-block mx-[30%] top-[-3%] inline-block absolute w-[40%] h-[10%]'}>
@@ -255,8 +486,19 @@ const Home: NextPage = () => {
                   <div className={'inline-block mx-[30%] bottom-[-3%] rotate-180 inline-block absolute w-[40%] h-[10%]'}>
                       <Image src={'/images/class_uzor.svg'} layout={'fill'}></Image>
                   </div>
-              </div>
-              <div className={'absolute right-[11vw]  top-[29.6vw] w-[19.6vw] h-[25vw]'}>
+              </div></motion.div>
+
+
+              <motion.div className={'absolute right-[11vw]  top-[29.6vw]'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.9, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, x:0 },
+                              hidden: { opacity: 0, x: -100 }
+                          }}>
+              <div className={'w-[19.6vw] h-[25vw]'}>
                   <div className={'mx-auto my-[5%] blur-shape rounded-[0.6vw] w-[80%] h-[92%] h-[7.5vw]'}>
                   </div>
                   <div className={'inline-block mx-[30%] top-[-3%] inline-block absolute w-[40%] h-[10%]'}>
@@ -268,17 +510,53 @@ const Home: NextPage = () => {
                   <div className={'inline-block mx-[30%] bottom-[-3%] rotate-180 inline-block absolute w-[40%] h-[10%]'}>
                       <Image src={'/images/class_uzor.svg'} layout={'fill'}></Image>
                   </div>
-              </div>
+              </div></motion.div>
           </div>
 
           {/*CLAN WARS*/}
 
           <div className={'overflow-auto block bg-cover text-[10px] top-[-0.5vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_6.png)] relative w-[100vw] h-[61vw]'} id={'clanwars'}>
-              <div className={'absolute left-[40.5vw] top-[3vw] w-[35vw] h-[30vw]'}>
+
+              <motion.div className={'absolute left-[40.5vw] top-[3vw]'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale: 0.8 }
+                          }}>
+              <div className={'w-[35vw] h-[30vw]'}>
                   <Image src={'/images/shields.png'} layout={'fill'}></Image>
-              </div>
-              <h1 className={'absolute inline-block left-[41.3vw] top-[31vw] text-reon text-[8vw] font-title'}>CLAN WARS</h1>
-              <h3 className={'text-center font-light absolute inline-block font-desc text-white bottom-[10.3vw] left-[30vw] leading-[123%] w-[54vw] text-[1.6vw]'}>Implemented a system of influence in the territory through the capture of outposts and cities during clan battles. Also clan fighters with a castle can help each other in battles, changing the course of battles in just 1-2 rounds</h3>
+              </div></motion.div>
+
+
+              <motion.div className={'absolute inline-block left-[41.3vw] top-[31vw]'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale: 0.8 }
+                          }}>
+                  <h1 className={' text-reon text-[8vw] font-title'}>CLAN WARS</h1></motion.div>
+
+
+
+              <motion.div className={'absolute inline-block bottom-[10.3vw] left-[30vw]'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y: -100 }
+                          }}>
+                  <h3 className={'text-center font-light inline-block font-desc text-white  leading-[123%] w-[54vw] text-[1.6vw]'}>Implemented a system of influence in the territory through the capture of outposts and cities during clan battles. Also clan fighters with a castle can help each other in battles, changing the course of battles in just 1-2 rounds</h3></motion.div>
+
+
+
               <div className={'inline-block absolute left-[42vw] bottom-[6vw] w-[31.6vw] h-[2vw]'}><Image className={'rotate-180'} src={'/images/uzor.png'} layout={'fill'} /></div>
           </div>
 
@@ -287,13 +565,52 @@ const Home: NextPage = () => {
           <div className={'overflow-auto block bg-cover text-[10px] top-[-0.6vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_7.png)] relative w-[100vw] h-[61vw]'} id={'craft'}>
               <div className={'absolute blur-shape inline-block left-[27.3vw] top-[10vw] rounded-[1.5vw] w-[63.9vw] h-[35.6vw]'}>
               </div>
-              <h3 className={'font-light text-right absolute inline-block font-desc text-white right-[39.7vw] top-[6.6vw] leading-[118.5%] w-[33vw] text-[1.7vw]'}>The game implements a mechanism for sharpening things and modifying them with gems, which give an increase in one of the main characteristics of the character</h3>
-              <div className={'inline-block absolute w-[13vw] h-[13vw] right-[5.2vw] top-[4vw]'}>
+
+
+              <motion.div className={'absolute right-[39.7vw] top-[6.6vw]  inline-block '} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, x:0 },
+                              hidden: { opacity: 0, x: 50 }
+                          }}><h3 className={'font-light text-right inline-block font-desc text-white leading-[118.5%] w-[33vw] text-[1.7vw]'}>The game implements a mechanism for sharpening things and modifying them with gems, which give an increase in one of the main characteristics of the character</h3></motion.div>
+
+
+              <motion.div className={'inline-block absolute w-[13vw] h-[13vw] right-[5.2vw] top-[4vw]'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut' , repeat:Infinity, repeatType: "reverse",}}
+                          variants={{
+                              visible: { opacity: 1, rotate: 0 },
+                              hidden: { opacity: 1, rotate: 20 }
+                          }}>
                   <Image src={'/images/craft_hammer.png'} layout={'fill'}></Image>
-              </div>
-              <h1 className={'absolute left-[64.4vw]  tracking-[0.035em] inline-block top-[3.3vw] text-reon text-[8vw] font-title'}>CRAFT</h1>
-              <div className={'absolute left-[32.5vw]  top-[19.8vw] w-[24.5vw] h-[28vw]'}>
+              </motion.div>
+
+              <motion.div className={'absolute left-[64.4vw] inline-block top-[3.3vw] '} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, x:0 },
+                              hidden: { opacity: 0, x: -50 }
+                          }}>
+                  <h1 className={'  tracking-[0.035em] inline-block text-reon text-[8vw] font-title'}>CRAFT</h1></motion.div>
+
+
+              <motion.div className={'absolute left-[32.5vw] top-[19.8vw] w-[24.5vw] h-[28vw]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale: 1.1 }
+                          }}>
                   <div className={'mx-auto my-[5%] blur-shape rounded-[0.6vw] w-[80%] h-[92%] h-[7.5vw]'}>
+                      <Image src={'/images/craft_card.png'} layout={'fill'}></Image>
                   </div>
                   <div className={'inline-block mx-[30%] top-[-4%] inline-block absolute w-[40%] h-[10%]'}>
                       <Image src={'/images/uzor_white.svg'} layout={'fill'}></Image>
@@ -304,12 +621,27 @@ const Home: NextPage = () => {
                   <div className={'inline-block mx-[30%] bottom-[-5%] rotate-180 inline-block absolute w-[40%] h-[10%]'}>
                       <Image src={'/images/uzor_white.svg'} layout={'fill'}></Image>
                   </div>
-              </div>
-              <div className={'absolute inline-block w-[6.3vw] h-[5vw] left-[56.2vw] top-[29.5vw]'}>
+              </motion.div>
+              <motion.div className={'absolute inline-block w-[6.3vw] h-[5vw] left-[56.2vw] top-[29.5vw]'} initial="hidden"
+                          whileInView={'visible'}
+
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut' , repeat:Infinity, repeatType: "reverse",}}
+                          variants={{
+                              visible: { opacity: 1, x: -10 },
+                              hidden: { opacity: 1, x: 10 }
+                          }}>
                   <Image src={'/images/craft_arrow.svg'} layout={'fill'}></Image>
-              </div>
-              <div className={'absolute left-[61.7vw]  top-[19.8vw] w-[24.5vw] h-[28vw]'}>
+              </motion.div>
+              <motion.div className={'absolute left-[61.7vw]  top-[19.8vw] w-[24.5vw] h-[28vw]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale: 1.1 }
+                          }}>
                   <div className={'mx-auto my-[5%] blur-shape rounded-[0.6vw] w-[80%] h-[92%] h-[7.5vw]'}>
+                      <Image src={'/images/craft_card2.png'} layout={'fill'}></Image>
                   </div>
                   <div className={'inline-block mx-[30%] top-[-4%] inline-block absolute w-[40%] h-[10%]'}>
                       <Image src={'/images/uzor_white.svg'} layout={'fill'}></Image>
@@ -320,45 +652,92 @@ const Home: NextPage = () => {
                   <div className={'inline-block mx-[30%] bottom-[-5%] rotate-180 inline-block absolute w-[40%] h-[10%]'}>
                       <Image src={'/images/uzor_white.svg'} layout={'fill'}></Image>
                   </div>
-              </div>
+              </motion.div>
           </div>
 
           {/*MARKETPLACE*/}
 
           <div className={'overflow-auto block bg-cover text-[10px] top-[-0.7vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_8.png)] relative w-[100vw] h-[61vw]'} id={'marketplace'}>
-              <h1 className={'absolute left-[26vw]  tracking-[0.035em] inline-block top-[5.2vw] text-reon text-[6.8vw] font-title'}>MARKETPLACE</h1>
-              <h3 className={'font-light text-left absolute inline-block font-desc text-white left-[26.2vw] top-[15.5vw] leading-[118.5%] w-[52vw] text-[1.64vw]'}>If you have a merchant`&apos;`s license, you can trade with other players for a minimal tax, or you can accept the game`&apos;`s standard commission for selling items.</h3>
-              <div className={'absolute left-[25.3vw] blur-shape rounded-[0.6vw] top-[24.2vw] w-[17.2vw] h-[23.5vw]'}>
+              <motion.div className={'absolute left-[26vw] top-[2vw] '} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, x:0 },
+                              hidden: { opacity: 0, x:-100 }
+                          }}><h1 className={'tracking-[0.035em] inline-block text-reon text-[6.8vw] font-title'}>MARKETPLACE</h1></motion.div>
+
+
+              <motion.div className={'absolute left-[26.2vw] top-[15.5vw] '} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.6, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0 },
+                              hidden: { opacity: 0, y:-100 }
+                          }}><h3 className={'font-light text-left  inline-block font-desc text-white  leading-[118.5%] w-[52vw] text-[1.64vw]'}>If you have a merchant`&apos;`s license, you can trade with other players for a minimal tax, or you can accept the game`&apos;`s standard commission for selling items.</h3></motion.div>
+
+
+              <motion.div className={'absolute left-[25.3vw] blur-shape rounded-[0.6vw] top-[24.2vw]  w-[17.2vw] h-[23.5vw]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.6, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale:0.8 }
+                          }}>
                   <div className={'absolute w-full h-full top-0 left-0 '}>
                       <Image src={'/images/craft_blade.png'} layout={'fill'}></Image>
                   </div>
-              </div>
-              <div className={'absolute left-[46.6vw] blur-shape rounded-[0.6vw] top-[24.2vw] w-[17.2vw] h-[23.5vw]'}>
+              </motion.div>
+              <motion.div className={'absolute left-[46.6vw] blur-shape rounded-[0.6vw] top-[24.2vw] w-[17.2vw] h-[23.5vw]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.6, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale:0.8 }
+                          }}>
                   <div className={'absolute w-[17vw] mx-[0.1vw] h-[17vw] my-[10%] top-0 left-0 '}>
                       <Image src={'/images/craft_shield.png'} layout={'fill'}></Image>
                   </div>
-              </div>
-              <div className={'absolute left-[67.9vw] blur-shape rounded-[0.6vw] top-[24.2vw] w-[17.2vw] h-[23.5vw]'}>
+              </motion.div>
+              <motion.div className={'absolute left-[67.9vw] blur-shape rounded-[0.6vw] top-[24.2vw] w-[17.2vw] h-[23.5vw]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.6, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale:0.8 }
+                          }}>
                   <div className={'absolute w-[17vw] mx-[0.1vw] h-[17vw] my-[20%]'}>
                       <Image src={'/images/craft_axe.png'} layout={'fill'}></Image>
                   </div>
-              </div>
-              <div className={'inline-block absolute w-[19.4vw] h-[33.6vw] right-0 bottom-0'}>
+              </motion.div>
+              <motion.div className={'inline-block absolute w-[19.4vw] h-[33.6vw] right-0 bottom-0'}>
                   <Image src={'/images/the_dwarf.png'} layout={'fill'}></Image>
-              </div>
+              </motion.div>
+              <motion.div className={'absolute left-[26vw] top-[51vw]'} initial={'hidden'} animate={'visible'} variants={{
+                  'hidden':{
+                      opacity:0,
+                  },
+                  'visible':{
+                      opacity:1,
+                      transition:{
+                          delay:0.3,
+                          ease:'circIn',
+                          duration:0.3,
+                      }
+                  }
+              }}><button className={'rounded-[1vw] inline-block  h-[6vw] w-[33vw] gold-button'}><h2 className={'button-text font-title tracking-[0.13em] text-[3vw]'}>GO TO MARKETPLACE</h2></button></motion.div>
           </div>
 
-          {/*DONATE SYSTEM*/}
+          {/*/!*DONATE SYSTEM*!/*/}
 
-          <div className={'overflow-auto block bg-cover text-[10px] top-[-0.9vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_9.png)] relative w-[100vw] h-[61vw]'} id={'donatesystem'}>
-              <h1 className={'absolute inline-block right-[8.6vw] top-[11vw] text-reon text-[7vw] font-title'}>DONATE SYSTEM</h1>
-              <h3 className={'absolute inline-block font-[300] text-right font-desc text-white right-[10.4vw] top-[21.6vw] leading-[119%] w-[48vw] text-[1.63vw]'}>You can even start the game by buying a simple starter pack and saving up tokens for the right thing in the state store, or you can buy tokens on DEX and buy the best equipment for your level at once.<br/><br/>
-                  However, remember that the better equipment you are wearing, the higher your character rating and the less experience you will get for weaker players</h3>
-              <button className={'rounded-[1vw] absolute right-[10.5vw] h-[7vw] w-[37.6vw] top-[39.5vw] gold-button'}><h2 className={'button-text font-title tracking-[0.13em] text-[3.5vw]'}>BUY STARTER PACK</h2></button>
-              <div className={'absolute inline-block left-[8.2vw] bottom-0 w-[40vw] h-[34vw]'}>
-                  <Image src={'/images/donate_money.png'} layout={'fill'}></Image>
-              </div>
-          </div>
+          {/*<div className={'overflow-auto block bg-cover text-[10px] top-[-0.9vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_9.png)] relative w-[100vw] h-[61vw]'} id={'donatesystem'}>*/}
+          {/*    <h1 className={'absolute inline-block right-[8.6vw] top-[11vw] text-reon text-[7vw] font-title'}>DONATE SYSTEM</h1>*/}
+          {/*    <h3 className={'absolute inline-block font-[300] text-right font-desc text-white right-[10.4vw] top-[21.6vw] leading-[119%] w-[48vw] text-[1.63vw]'}>You can even start the game by buying a simple starter pack and saving up tokens for the right thing in the state store, or you can buy tokens on DEX and buy the best equipment for your level at once.<br/><br/>*/}
+          {/*        However, remember that the better equipment you are wearing, the higher your character rating and the less experience you will get for weaker players</h3>*/}
+          {/*    <button className={'rounded-[1vw] absolute right-[10.5vw] h-[7vw] w-[37.6vw] top-[39.5vw] gold-button'}><h2 className={'button-text font-title tracking-[0.13em] text-[3.5vw]'}>BUY STARTER PACK</h2></button>*/}
+          {/*    <div className={'absolute inline-block left-[8.2vw] bottom-0 w-[40vw] h-[34vw]'}>*/}
+          {/*        <Image src={'/images/donate_money.png'} layout={'fill'}></Image>*/}
+          {/*    </div>*/}
+          {/*</div>*/}
 
           {/*RATING SYSTEM*/}
 
@@ -369,88 +748,223 @@ const Home: NextPage = () => {
                           <div className={'absolute w-[80%] h-[92%] bottom-[-1.2vw] mx-[10%]'}>
                               <Image src={'/images/RatingScreen/bar9.png'} layout={'fill'}></Image>
                           </div>
-                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[3.4vw] mx-[10%]'}>
+                          <motion.div className={'absolute w-[6.3vw] left-[-15%] z-[9999] h-[6.3vw] top-[3.4vw] mx-[10%]'} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 1.4, delay:0.3, ease:'backInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 1, y:'370%'}
+                                      }}>
                               <Image src={'/images/RatingScreen/hero1.png'} layout={'fill'}></Image>
-                          </div>
+                          </motion.div>
                           <h3 className={'absolute inline-block w-[40%] ml-[28%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>3</h3>
+                          <motion.div className={'absolute w-[6.3vw] bottom-[-4vw] z-[9999] '} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 0.5, delay:0.3, ease:'easeInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 0, y:-50}
+                                      }}><p className={' inline-block w-[70%] ml-[15%] text-center mr-[15%]  font-desc text-[1.7vw] text-white'}>3739</p></motion.div>
                       </div>
-                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                      <div className={'inline-block relative z-[9999] w-[10%] h-full mx-[0.555%]'}>
                           <div className={'absolute w-[80%] h-[77%] bottom-[-1.2vw] mx-[10%]'}>
                               <Image src={'/images/RatingScreen/bar8.png'} layout={'fill'}></Image>
                           </div>
                           <h3 className={'absolute inline-block w-[40%] ml-[32%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>6</h3>
-                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[9vw] mx-[10%]'}>
+                          <motion.div className={'absolute inline-block w-[6.3vw] bottom-[-4vw] z-[9999] '} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 0.5, delay:0.5, ease:'easeInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 0, y:-50}
+                                      }}><p className={'w-[70%] ml-[15%] text-center mr-[15%] font-desc text-[1.7vw] text-white'}>2668</p></motion.div>
+                          <motion.div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[9vw] mx-[10%]'} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 1.4, delay:0.5, ease:'backInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 1, y:'290%'}
+                                      }}>
                               <Image src={'/images/RatingScreen/hero2.png'} layout={'fill'}></Image>
-                          </div>
+                          </motion.div>
                       </div>
-                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                      <div className={'inline-block relative z-[9999] w-[10%] h-full mx-[0.555%]'}>
                           <div className={'absolute w-[80%] h-[98%] bottom-[-1.2vw] mx-[10%]'}>
                               <Image src={'/images/RatingScreen/bar7.png'} layout={'fill'}></Image>
                           </div>
                           <h3 className={'absolute inline-block w-[40%] ml-[28%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>2</h3>
-                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[3vw] mx-[10%]'}>
+                          <motion.div className={'absolute inline-block w-[6.3vw] bottom-[-4vw] z-[9999] '} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 0.5, delay:0.7, ease:'easeInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 0, y:-50}
+                                      }}><p className={' w-[70%] ml-[15%] text-center mr-[15%] font-desc text-[1.7vw] text-white'}>3849</p></motion.div>
+                          <motion.div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[3vw] mx-[10%]'} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 1.4, delay:0.7, ease:'backInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 1, y:'390%'}
+                                      }}>
                               <Image src={'/images/RatingScreen/hero3.png'} layout={'fill'}></Image>
-                          </div>
+                          </motion.div>
                       </div>
-                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                      <div className={'inline-block relative z-[9999] w-[10%] h-full mx-[0.555%]'}>
                           <div className={'absolute w-[80%] h-[54%] bottom-[-1.2vw] mx-[10%]'}>
                               <Image src={'/images/RatingScreen/bar6.png'} layout={'fill'}></Image>
                           </div>
                           <h3 className={'absolute inline-block w-[40%] ml-[28%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>9</h3>
-                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[16vw] mx-[10%]'}>
+                          <motion.div className={'absolute inline-block w-[6.3vw] bottom-[-4vw] z-[9999] '} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 0.5, delay:0.9, ease:'easeInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 0, y:-50}
+                                      }}><p className={' w-[70%] ml-[15%] text-center mr-[15%] font-desc text-[1.7vw] text-white'}>2546</p></motion.div>
+                          <motion.div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[16vw] mx-[10%]'} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 1.4, delay:0.9, ease:'backInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 1, y:'190%'}
+                                      }}>
                               <Image src={'/images/RatingScreen/hero4.png'} layout={'fill'}></Image>
-                          </div>
+                          </motion.div>
                       </div>
-                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                      <div className={'inline-block relative z-[9999] w-[10%] h-full mx-[0.555%]'}>
                           <div className={'absolute w-[80%] h-[84%] bottom-[-1.2vw] mx-[10%]'}>
                               <Image src={'/images/RatingScreen/bar5.png'} layout={'fill'}></Image>
                           </div>
                           <h3 className={'absolute inline-block w-[40%] ml-[28%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>5</h3>
-                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[7vw] mx-[10%]'}>
+                          <motion.div className={'absolute inline-block w-[6.3vw] bottom-[-4vw] z-[9999] '} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 0.5, delay:1.1, ease:'easeInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 0, y:-50}
+                                      }}><p className={' w-[70%] ml-[15%] text-center mr-[15%] font-desc text-[1.7vw] text-white'}>2998</p></motion.div>
+                          <motion.div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[7vw] mx-[10%]'} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 1.4, delay:1.1, ease:'backInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 1, y:'330%'}
+                                      }}>
                               <Image src={'/images/RatingScreen/hero5.png'} layout={'fill'}></Image>
-                          </div>
+                          </motion.div>
                       </div>
-                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                      <div className={'inline-block relative z-[9999] w-[10%] h-full mx-[0.555%]'}>
                           <div className={'absolute w-[80%] h-[75%] bottom-[-1.2vw] mx-[10%]'}>
                               <Image src={'/images/RatingScreen/bar4.png'} layout={'fill'}></Image>
                           </div>
                           <h3 className={'absolute inline-block w-[40%] ml-[35%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>7</h3>
-                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[10vw] mx-[10%]'}>
+                          <motion.div className={'absolute inline-block w-[6.3vw] bottom-[-4vw] z-[9999] '} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 0.5, delay:1.3, ease:'easeInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 0, y:-50}
+                                      }}><p className={' w-[70%] ml-[15%] text-center mr-[15%] font-desc text-[1.7vw] text-white'}>2617</p></motion.div>
+                          <motion.div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[10vw] mx-[10%]'} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 1.4, delay:1.3, ease:'backInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 1, y:'290%'}
+                                      }} >
                               <Image src={'/images/RatingScreen/hero6.png'} layout={'fill'}></Image>
-                          </div>
+                          </motion.div>
                       </div>
-                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                      <div className={'inline-block relative z-[9999] w-[10%] h-full mx-[0.555%]'}>
                           <div className={'absolute w-[80%] h-[100%] bottom-[-1.2vw] mx-[10%]'}>
                               <Image src={'/images/RatingScreen/bar3.png'} layout={'fill'}></Image>
                           </div>
                           <h3 className={'absolute inline-block w-[40%] ml-[35%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>1</h3>
-                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[1vw] mx-[10%]'}>
+                          <motion.div className={'absolute inline-block w-[6.3vw] bottom-[-4vw] z-[9999] '} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 0.5, delay:1.5, ease:'easeInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 0, y:-50}
+                                      }}><p className={' w-[70%] ml-[15%] text-center mr-[15%] font-desc text-[1.7vw] text-white'}>3893</p></motion.div>
+                          <motion.div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[1vw] mx-[10%]'} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 1.4, delay:1.5, ease:'backInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 1, y:'430%'}
+                                      }}>
                               <Image src={'/images/RatingScreen/hero7.png'} layout={'fill'}></Image>
-                          </div>
+                          </motion.div>
                       </div>
-                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                      <div className={'inline-block relative z-[9999] w-[10%] h-full mx-[0.555%]'}>
                           <div className={'absolute w-[80%] h-[64%] bottom-[-1.2vw] mx-[10%]'}>
                               <Image src={'/images/RatingScreen/bar2.png'} layout={'fill'}></Image>
                           </div>
                           <h3 className={'absolute inline-block w-[40%] ml-[28%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>8</h3>
-                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[13vw] mx-[10%]'}>
+                          <motion.div className={'absolute inline-block w-[6.3vw] bottom-[-4vw] z-[9999] '} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 0.5, delay:1.7, ease:'easeInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 0, y:-50}
+                                      }}><p className={' w-[70%] ml-[15%] text-center mr-[15%] font-desc text-[1.7vw] text-white'}>2583</p></motion.div>
+                          <motion.div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[13vw] mx-[10%]'} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 1.4, delay:1.7, ease:'backInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 1, y:'240%'}
+                                      }} >
                               <Image src={'/images/RatingScreen/hero8.png'} layout={'fill'}></Image>
-                          </div>
+                          </motion.div>
                       </div>
-                      <div className={'inline-block relative w-[10%] h-full mx-[0.555%]'}>
+                      <div className={'inline-block relative z-[9999] w-[10%] h-full mx-[0.555%]'}>
                           <div className={'absolute w-[80%] h-[86%] bottom-[-1.2vw] mx-[10%]'}>
                               <Image src={'/images/RatingScreen/bar1.png'} layout={'fill'}></Image>
                           </div>
                           <h3 className={'absolute inline-block w-[40%] ml-[30%] mr-[25%] bottom-[-3vw] font-bars text-[7vw] text-button'}>4</h3>
-                          <div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[6vw] mx-[10%]'}>
+                          <motion.div className={'absolute inline-block w-[6.3vw] bottom-[-4vw] z-[9999] '} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 0.5, delay:1.9, ease:'easeInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 0, y:-50}
+                                      }}><p className={' w-[70%] ml-[15%] text-center mr-[15%] font-desc text-[1.7vw] text-white'}>3207</p></motion.div>
+                          <motion.div className={'absolute w-[6.3vw] left-[-15%] h-[6.3vw] top-[6vw] mx-[10%]'} initial={'hidden'} whileInView={'visible'}
+                                      viewport={{once:true}}
+                                      transition={{ duration: 1.4, delay:1.9, ease:'backInOut'}}
+                                      variants={{
+                                          visible: { opacity: 1, y:0 },
+                                          hidden: { opacity: 1, y:'350%'}
+                                      }}>
                               <Image src={'/images/RatingScreen/hero9.png'} layout={'fill'}></Image>
-                          </div>
+                          </motion.div>
                       </div>
                   </div>
               </div>
-              <h3 className={'font-light text-left absolute inline-block font-desc text-white left-[54vw] top-[10.4vw] leading-[118.5%] w-[33vw] text-[1.5vw]'}>Rating is a unique system for GameFi projects that simultaneously balances the capabilities of whales and small players. </h3>
-              <h1 className={'absolute left-[31vw]  tracking-[0.035em] inline-block top-[7.6vw] text-reon text-[6.6vw] font-title'}>RATING</h1>
-              <div className={'w-[55vw] top-[53.6vw] left-[32.6vw] h-[2vw] absolute inline-block'}>
+
+
+              <motion.div className={'absolute left-[54vw] top-[10.4vw]  '} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.6, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, x:0 },
+                              hidden: { opacity: 0, x:-100 }
+                          }}><h3 className={'font-light text-left inline-block font-desc text-white leading-[118.5%] w-[33vw] text-[1.5vw]'}>Rating is a unique system for GameFi projects that simultaneously balances the capabilities of whales and small players. </h3></motion.div>
+
+
+              <motion.div className={'absolute left-[31vw] top-[7.6vw]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale:0.8 }
+                          }}><h1 className={'tracking-[0.035em] text-reon text-[6.6vw] font-title'}>RATING</h1></motion.div>
+
+
+              <div className={'w-[55vw] top-[58.6vw] left-[32.6vw] h-[2vw] absolute inline-block'}>
                   <Image src={'/images/RatingScreen/rating_uzor.png'} layout={'fill'}></Image>
               </div>
           </div>
@@ -458,14 +972,36 @@ const Home: NextPage = () => {
           {/*ROAD MAP*/}
 
           <div className={'overflow-auto block bg-cover text-[10px] top-[-1.1vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_map.png)] relative w-[100vw] h-[61vw]'} id={'roadmap'}>
-              <h1 className={'absolute inline-block left-[64vw] top-[7vw] text-reon text-[5.8vw] font-title'}>ROAD MAP</h1>
-              <div className={'absolute inline-block right-0 top-[5vw] w-[14vw] h-[19vw]'}>
+
+
+              <motion.div className={'absolute left-[64vw] top-[7vw]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale:0.8 }
+                          }}><h1 className={' inline-block  text-reon text-[5.8vw] font-title'}>ROAD MAP</h1></motion.div>
+
+
+              <motion.div className={'absolute inline-block right-0 top-[5vw] w-[14vw] h-[19vw]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, x:0 },
+                              hidden: { opacity: 0, x:'100%' }
+                          }}>
                   <Image src={'/images/kompas.png'} layout={'fill'}></Image>
-              </div>
+              </motion.div>
               <div className={'absolute inline-block left-[30vw] top-[13vw] w-[50vw] h-[40vw]'}>
                   <Image src={'/images/roadmap_way.svg'} layout={'fill'}></Image>
               </div>
-              <div className={'w-[17.5vw] rounded-[1vw] h-[13.7vw] left-[24.9vw] top-[10.5vw] inline-block relative blur-shape'}>
+              <motion.div className={'w-[17.5vw] rounded-[1vw] h-[13.7vw] left-[24.9vw] top-[10.5vw] inline-block relative blur-shape'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale:0.8 }
+                          }}>
                   <div className={'w-[4.2vw] h-[4.2vw] top-0 right-0 inline-block absolute'}>
                       <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
                   </div>
@@ -478,8 +1014,14 @@ const Home: NextPage = () => {
                   </div>
                   <p className={'font-[400] w-[80%] mx-auto mt-[37%] font-desc block text-center text-[1.14vw] leading-[118.5%] text-white'}>Team building, Assets,
                       Basic Concept development, Economics model</p>
-              </div>
-              <div className={'w-[18vw] rounded-[1vw] h-[14vw] left-[49.3vw] top-[17vw] inline-block absolute blur-shape'}>
+              </motion.div>
+              <motion.div className={'w-[18vw] rounded-[1vw] h-[14vw] left-[49.3vw] top-[17vw] inline-block absolute blur-shape'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale:0.8 }
+                          }}>
                   <div className={'w-[4.2vw] h-[4.2vw] top-0 right-0 inline-block absolute'}>
                       <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
                   </div>
@@ -491,8 +1033,14 @@ const Home: NextPage = () => {
                       <p className={'font-desc mt-[5%] text-center bg-gold text-[2.04vw]'}>q1 2022</p>
                   </div>
                   <p className={'font-[400] w-[80%] mx-auto mt-[37%] font-desc block text-center text-[1.14vw] leading-[118.5%] text-white'}>Public demo release, IDO launch on pinksale, Game release</p>
-              </div>
-              <div className={'w-[18vw] rounded-[1vw] h-[14vw] left-[26.4vw] top-[32vw] inline-block absolute blur-shape'}>
+              </motion.div>
+              <motion.div className={'w-[18vw] rounded-[1vw] h-[14vw] left-[26.4vw] top-[32vw] inline-block absolute blur-shape'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale:0.8 }
+                          }}>
                   <div className={'w-[4.2vw] h-[4.2vw] top-0 right-0 inline-block absolute'}>
                       <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
                   </div>
@@ -504,8 +1052,14 @@ const Home: NextPage = () => {
                       <p className={'font-desc mt-[5%] text-center bg-gold text-[2.04vw]'}>q2 2022</p>
                   </div>
                   <p className={'font-[400] w-[80%] mx-auto mt-[37%] font-desc block text-center text-[1.14vw] leading-[118.5%] text-white'}>Land market, Clan buildings, Clan wars, Gate.io listing</p>
-              </div>
-              <div className={'w-[18.5vw] rounded-[1vw] h-[13vw] left-[50.4vw] top-[37.7vw] inline-block absolute blur-shape'}>
+              </motion.div>
+              <motion.div className={'w-[18.5vw] rounded-[1vw] h-[13vw] left-[50.4vw] top-[37.7vw] inline-block absolute blur-shape'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale:0.8 }
+                          }}>
                   <div className={'w-[4.2vw] h-[4.2vw] top-0 right-0 inline-block absolute'}>
                       <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
                   </div>
@@ -517,8 +1071,14 @@ const Home: NextPage = () => {
                       <p className={'font-desc mt-[5%] text-center bg-gold text-[2.04vw]'}>q3 2022</p>
                   </div>
                   <p className={'font-[400] w-[75%] mx-auto mt-[37%] font-desc block text-center text-[1.14vw] leading-[118.5%] text-white'}>Championship of ReoN, Binance NFT avatar sale</p>
-              </div>
-              <div className={'w-[18.5vw] rounded-[1vw] h-[14.5vw] left-[71.4vw] top-[21.3vw] inline-block absolute blur-shape'}>
+              </motion.div>
+              <motion.div className={'w-[18.5vw] rounded-[1vw] h-[14.5vw] left-[71.4vw] top-[21.3vw] inline-block absolute blur-shape'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale:0.8 }
+                          }}>
                   <div className={'w-[4.2vw] h-[4.2vw] top-0 right-0 inline-block absolute'}>
                       <Image src={'/images/roadmap_card.png'} layout={'fill'}></Image>
                   </div>
@@ -530,21 +1090,49 @@ const Home: NextPage = () => {
                       <p className={'font-desc mt-[5%] text-center bg-gold text-[2.04vw]'}>q4 2022</p>
                   </div>
                   <p className={'font-[400] w-[80%] mx-auto mt-[37%] font-desc block text-center text-[1.14vw] leading-[118.5%] text-white'}>Triple A game demo release, early access for NFT avatar owners, Academy of ReoN</p>
-              </div>
+              </motion.div>
           </div>
 
           {/*TEAM*/}
 
           <div className={'overflow-auto block bg-cover text-[10px] top-[-1.2vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_12.png)] relative w-[100vw] h-[60vw]'} id={'team'}>
-              <h1 className={'absolute inline-block left-[50vw] top-[3vw] text-reon text-[8vw] font-title'}>TEAM</h1>
-              <div className={'absolute inline-block w-[8.3vw] top-[12vw] right-[14vw] h-[8.3vw]'}>
+
+
+              <motion.div className={'absolute inline-block left-[50vw] top-[3vw]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, scale:1 },
+                              hidden: { opacity: 0, scale:0.8 }
+                          }}><h1 className={' text-reon text-[8vw] font-title'}>TEAM</h1></motion.div>
+
+
+              <motion.div className={'absolute inline-block w-[8.3vw] top-[12vw] right-[14vw] h-[8.3vw]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, x:0 },
+                              hidden: { opacity: 0, x:-100 }
+                          }}>
                   <Image src={'/images/team_uzor.svg'} layout={'fill'}></Image>
-              </div>
-              <div className={'rotate-[-90deg] absolute inline-block w-[8.3vw] top-[12vw] left-[30.5vw] h-[8.3vw]'}>
+              </motion.div>
+              <motion.div className={'absolute inline-block w-[8.3vw] top-[12vw] left-[30.5vw] h-[8.3vw]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, x:0, rotate:-90 },
+                              hidden: { opacity: 0, x:100, rotate:-90 }
+                          }}>
                   <Image src={'/images/team_uzor.svg'} layout={'fill'}></Image>
-              </div>
+              </motion.div>
               <div className={'flex-wrap justify-between flex w-[47.8vw] h-[35vw] top-[17vw] inline-block absolute left-[34vw]'}>
-                  <div className={'relative w-[29%] h-[45%]'}>
+                  <motion.div className={'relative w-[29%] h-[45%]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0},
+                              hidden: { opacity: 0, y:100 }
+                          }}>
                       <div className={'w-full absolute h-[90%] rounded-[1vw] bottom-0 blur-shape'}>
                           <div className={'w-[6vw] h-[6vw] ml-[29%] top-[-10%] inline-block absolute'}>
                               <Image src={'/images/RatingScreen/hero1.png'} layout={'fill'}></Image>
@@ -552,8 +1140,14 @@ const Home: NextPage = () => {
                           <h2 className={'mt-[40%] font-desc absolute block w-[100%] text-center bg-gold text-[2.04vw]'}>Name</h2>
                           <h3 className={'mt-[65%] font-desc font-[300] text-white absolute block w-[100%] text-center text-[1.2vw]'}>position</h3>
                       </div>
-                  </div>
-                  <div className={'relative w-[29%] h-[45%]'}>
+                  </motion.div>
+                  <motion.div className={'relative w-[29%] h-[45%]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0},
+                              hidden: { opacity: 0, y:100 }
+                          }}>
                       <div className={'w-full absolute h-[90%] rounded-[1vw] bottom-0 blur-shape'}>
                           <div className={'w-[6vw] h-[6vw] ml-[29%] top-[-10%] inline-block absolute'}>
                               <Image src={'/images/RatingScreen/hero1.png'} layout={'fill'}></Image>
@@ -561,8 +1155,14 @@ const Home: NextPage = () => {
                           <h2 className={'mt-[40%] font-desc absolute block w-[100%] text-center bg-gold text-[2.04vw]'}>Name</h2>
                           <h3 className={'mt-[65%] font-desc font-[300] text-white absolute block w-[100%] text-center text-[1.2vw]'}>position</h3>
                       </div>
-                  </div>
-                  <div className={'relative w-[29%] h-[45%]'}>
+                  </motion.div>
+                  <motion.div className={'relative w-[29%] h-[45%]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0},
+                              hidden: { opacity: 0, y:100 }
+                          }}>
                       <div className={'w-full absolute h-[90%] rounded-[1vw] bottom-0 blur-shape'}>
                           <div className={'w-[6vw] h-[6vw] ml-[29%] top-[-10%] inline-block absolute'}>
                               <Image src={'/images/RatingScreen/hero1.png'} layout={'fill'}></Image>
@@ -570,8 +1170,14 @@ const Home: NextPage = () => {
                           <h2 className={'mt-[40%] font-desc absolute block w-[100%] text-center bg-gold text-[2.04vw]'}>Name</h2>
                           <h3 className={'mt-[65%] font-desc font-[300] text-white absolute block w-[100%] text-center text-[1.2vw]'}>position</h3>
                       </div>
-                  </div>
-                  <div className={'relative w-[29%] h-[45%]'}>
+                  </motion.div>
+                  <motion.div className={'relative w-[29%] h-[45%]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0},
+                              hidden: { opacity: 0, y:100 }
+                          }}>
                       <div className={'w-full absolute h-[90%] rounded-[1vw] bottom-0 blur-shape'}>
                           <div className={'w-[6vw] h-[6vw] ml-[29%] top-[-10%] inline-block absolute'}>
                               <Image src={'/images/RatingScreen/hero1.png'} layout={'fill'}></Image>
@@ -579,8 +1185,14 @@ const Home: NextPage = () => {
                           <h2 className={'mt-[40%] font-desc absolute block w-[100%] text-center bg-gold text-[2.04vw]'}>Name</h2>
                           <h3 className={'mt-[65%] font-desc font-[300] text-white absolute block w-[100%] text-center text-[1.2vw]'}>position</h3>
                       </div>
-                  </div>
-                  <div className={'relative w-[29%] h-[45%]'}>
+                  </motion.div>
+                  <motion.div className={'relative w-[29%] h-[45%]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0},
+                              hidden: { opacity: 0, y:100 }
+                          }}>
                       <div className={'w-full absolute h-[90%] rounded-[1vw] bottom-0 blur-shape'}>
                           <div className={'w-[6vw] h-[6vw] ml-[29%] top-[-10%] inline-block absolute'}>
                               <Image src={'/images/RatingScreen/hero1.png'} layout={'fill'}></Image>
@@ -588,8 +1200,14 @@ const Home: NextPage = () => {
                           <h2 className={'mt-[40%] font-desc absolute block w-[100%] text-center bg-gold text-[2.04vw]'}>Name</h2>
                           <h3 className={'mt-[65%] font-desc font-[300] text-white absolute block w-[100%] text-center text-[1.2vw]'}>position</h3>
                       </div>
-                  </div>
-                  <div className={'relative w-[29%] h-[45%]'}>
+                  </motion.div>
+                  <motion.div className={'relative w-[29%] h-[45%]'} initial={'hidden'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0},
+                              hidden: { opacity: 0, y:100 }
+                          }}>
                       <div className={'w-full absolute h-[90%] rounded-[1vw] bottom-0 blur-shape'}>
                           <div className={'w-[6vw] h-[6vw] ml-[29%] top-[-10%] inline-block absolute'}>
                               <Image src={'/images/RatingScreen/hero1.png'} layout={'fill'}></Image>
@@ -597,14 +1215,20 @@ const Home: NextPage = () => {
                           <h2 className={'mt-[40%] font-desc absolute block w-[100%] text-center bg-gold text-[2.04vw]'}>Name</h2>
                           <h3 className={'mt-[65%] font-desc font-[300] text-white absolute block w-[100%] text-center text-[1.2vw]'}>position</h3>
                       </div>
-                  </div>
+                  </motion.div>
               </div>
           </div>
 
           {/*PARTNERS*/}
 
           <div className={'overflow-auto block bg-cover text-[10px] top-[-1.3vw] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/bg_13.png)] relative w-[100vw] h-[57.5vw]'} id={'partners'}>
-              <div className={'flex-wrap justify-between flex w-[68vw] h-[39vw] top-[12vw] inline-block absolute blur-shape left-[28vw]'}>
+              <motion.div className={'flex-wrap justify-between flex w-[68vw] h-[39vw] top-[12vw] inline-block absolute blur-shape left-[28vw]'} whileInView={'visible'}
+                          viewport={{once:true}}
+                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
+                          variants={{
+                              visible: { opacity: 1, y:0},
+                              hidden: { opacity: 0, y:100 }
+                          }}>
                   <div className={'relative w-[17%] my-[6%] mx-[5%] h-[30%]'}>
                       <Image src={'/images/partner_logo.jpg'} layout={'fill'}></Image>
                   </div>
@@ -623,7 +1247,7 @@ const Home: NextPage = () => {
                   <div className={'relative w-[17%] my-[6%] mx-[5%] h-[30%]'}>
                       <Image src={'/images/partner_logo.jpg'} layout={'fill'}></Image>
                   </div>
-              </div>
+              </motion.div>
               <h1 className={'absolute inline-block left-[49vw] top-[7vw] text-reon text-[6.4vw] font-title'}>PARTNERS</h1>
               <div className={'w-[60vw] left-[32vw] top-[10.9vw] h-[2.4vw] absolute inline-block'}>
                   <Image src={'/images/partner_uzor1.png'} layout={'fill'}></Image>
