@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 // @ts-ignore
+import {motion} from "framer-motion";
 import { Link, animateScroll as scroll } from "react-scroll";
 export default class Navbar extends Component {
     render() {
@@ -13,13 +14,35 @@ export default class Navbar extends Component {
             slidesToScroll: 1
         };
         return (
-            <div className={'fixed h-[45vw] left-0 top-[2vw] w-[17.2vw] blur-shape rounded-[1vw] z-[9999]'}>
+            <motion.div className={'fixed h-[45vw] left-0 top-[2vw] w-[17.2vw] blur-shape rounded-[1vw] z-[9999]'} initial={'hidden'} animate={'visible'} variants={{
+                'hidden':{
+                    opacity:1,
+                    x:'-22vw',
+                },
+                'visible':{
+                    opacity:1,
+                    x:0,
+                    transition:{
+                        delay:0.7,
+                        ease:'easeInOut',
+                        duration:1,
+                    }
+                }
+            }}>
                 <div className={'inline-block absolute top-[-1.4vw] left-0 w-[19vw] h-[3.5vw]'}>
                     <Image src={'/images/navbar_uzor.png'} layout={'fill'}></Image>
                 </div>
-                <div className={'inline-block absolute top-[3.7vw] left-[11.6vw] w-[9vw] h-[9vw]'}>
+                <motion.div className={'inline-block absolute top-[3.7vw] left-[11.6vw] w-[11vw] h-[11vw]'} initial="hidden"
+                            whileInView={'visible'}
+
+                            viewport={{once:true}}
+                            transition={{ duration: 1, delay:0.3, ease:'easeInOut' , repeat:Infinity, repeatType: "reverse",}}
+                            variants={{
+                                visible: { opacity: 1, rotate: 10 },
+                                hidden: { opacity: 1, rotate: -10 }
+                            }} >
                     <Image src={'/images/reon_logo.png'} layout={'fill'}></Image>
-                </div>
+                </motion.div>
                 <div className={'inline-block absolute bottom-[-1vw] left-[6.6vw] w-[4.3vw] h-[4.3vw]'}>
                     <Image src={'/images/twitter_button.png'} layout={'fill'}></Image>
                 </div>
@@ -30,21 +53,14 @@ export default class Navbar extends Component {
                     <Image src={'/images/mail_button.png'} layout={'fill'}></Image>
                 </div>
                 <nav className={'absolute top-[5vw]'}>
-                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'intro'}>Intro</Link>
-                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'about'}>About</Link>
-                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'teaser'}>Teaser</Link>
-                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'races'}>Races</Link>
-                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'classes'}>Classes</Link>
-                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'clanwars'}>Clan wars</Link>
-                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'craft'}>Craft</Link>
-                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'marketplace'}>Marketplace</Link>
-                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'donatesystem'}>Donate System</Link>
-                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'rating'}>Rating</Link>
-                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'roadmap'}>Roadmap</Link>
-                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'gameflow'}>Gameflow</Link>
-                    <Link spy={true} smooth={true} offset={-50} duration= {500} activeClass={"active"} className={'navbar-item'} to={'docs'}>Docs</Link>
+                    <Link activeClass={"active"} className={'navbar-item'} to={'intro'}>Main</Link>
+                    <Link activeClass={"active"} className={'navbar-item'} to={'about'}>Arena</Link>
+                    <Link activeClass={"active"} className={'navbar-item'} to={'teaser'}>Marketplace</Link>
+                    <Link activeClass={"active"} className={'navbar-item'} to={'races'}>Taverna</Link>
+                    <Link activeClass={"active"} className={'navbar-item'} to={'classes'}>My account</Link>
                 </nav>
-            </div>
+                <button className={'rounded-[1vw] inline-block absolute left-[1vw] h-[4vw] w-[15vw] top-[23vw] gold-button'}><h2 className={'button-text font-title tracking-[0.13em] text-[1.5vw]'}>CONNECT WALLET</h2></button>
+            </motion.div>
         );
     }
 }

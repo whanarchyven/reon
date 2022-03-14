@@ -983,13 +983,7 @@ const Home: NextPage = () => {
                           }}><h1 className={' inline-block  text-reon text-[5.8vw] font-title'}>ROAD MAP</h1></motion.div>
 
 
-              <motion.div className={'absolute inline-block right-0 top-[5vw] w-[14vw] h-[19vw]'} initial={'hidden'} whileInView={'visible'}
-                          viewport={{once:true}}
-                          transition={{ duration: 1, delay:0.3, ease:'easeInOut'}}
-                          variants={{
-                              visible: { opacity: 1, x:0 },
-                              hidden: { opacity: 0, x:'100%' }
-                          }}>
+              <motion.div className={'absolute inline-block right-0 top-[5vw] w-[14vw] h-[19vw]'} >
                   <Image src={'/images/kompas.png'} layout={'fill'}></Image>
               </motion.div>
               <div className={'absolute inline-block left-[30vw] top-[13vw] w-[50vw] h-[40vw]'}>
