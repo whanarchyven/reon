@@ -9,7 +9,7 @@ import SimpleSlider from "../components/CenterSlider";
 import Navbar from "../components/Navbar"
 import CenterSlider from "../components/CenterSlider";
 import { motion } from 'framer-motion';
-
+import Script from 'next/script'
 
 const Home: NextPage = () => {
     const settings = {
@@ -20,6 +20,7 @@ const Home: NextPage = () => {
         slidesToShow: 3,
         speed: 500
     };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -41,7 +42,6 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-
           <Navbar></Navbar>
 
           {/*INTRO*/}
