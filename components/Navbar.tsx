@@ -53,11 +53,11 @@ export default class Navbar extends Component {
                     <Image src={'/images/mail_button.png'} layout={'fill'}></Image>
                 </div>
                 <nav className={'absolute top-[5vw]'}>
-                    <Link activeClass={"active"} className={'navbar-item'} to={'intro'}>Main</Link>
-                    <Link activeClass={"active"} className={'navbar-item'} to={'about'}>Arena</Link>
-                    <Link activeClass={"active"} className={'navbar-item'} to={'teaser'}>Marketplace</Link>
-                    <Link activeClass={"active"} className={'navbar-item'} to={'races'}>Taverna</Link>
-                    <Link activeClass={"active"} className={'navbar-item'} to={'classes'}>My account</Link>
+                    <a className={'navbar-item'} href={'/n'}>Main</a>
+                    <a className={'navbar-item'} href={'/coming'}>Arena</a>
+                    <a className={'navbar-item'} href={'/coming'}>Marketplace</a>
+                    <a className={'navbar-item'} href={'/taverna'}>Taverna</a>
+                    <a className={'navbar-item'} href={'/coming'}>My account</a>
                 </nav>
                 <button className={'rounded-[1vw] inline-block absolute left-[1vw] h-[4vw] w-[15vw] top-[23vw] gold-button'}><h2 className={'button-text font-title tracking-[0.13em] text-[1.5vw]'}>CONNECT WALLET</h2></button>
             </motion.div>

@@ -9,6 +9,7 @@ module.exports = {
       'title': ['Another Danger Slanted', 'system-ui'],
       'desc':['BioRhyme','sans-serif'],
       'bars':['Beer Money','sans-serif'],
+      'jost':['Jost','sans-serif'],
     },
     colors: {
       button: "#AA966B",
