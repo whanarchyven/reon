@@ -316,7 +316,7 @@ const Home: NextPage = () => {
                           duration:0.3,
                       }
                   }
-              }}><button className={'rounded-[1vw] inline-block absolute left-[39.6vw] h-[7.2vw] w-[29.2vw] top-[39vw] gold-button'}><h2 className={'button-text font-title tracking-[0.13em] text-[3.5vw]'}>LEARN MORE</h2></button></motion.div>
+              }}><button className={'rounded-[1vw] inline-block absolute left-[39.6vw] h-[7.2vw] w-[29.2vw] top-[39vw] gold-button'}><a className={'cursor-pointer'} href={'/arena'}><h2 className={'button-text font-title tracking-[0.13em] text-[3.5vw]'}>PLAY NOW</h2></a></button></motion.div>
               <div className={'inline-block absolute left-[37.7vw] bottom-[1vw] w-[31.6vw] h-[2vw]'}><Image className={'rotate-180'} src={'/images/uzor.png'} layout={'fill'} /></div>
           </div>
 
@@ -893,7 +893,7 @@ const Home: NextPage = () => {
                           duration:0.3,
                       }
                   }
-              }}><button className={'rounded-[1vw] inline-block  h-[6vw] w-[33vw] gold-button'}><h2 className={'button-text font-title tracking-[0.13em] text-[3vw]'}>GO TO MARKETPLACE</h2></button></motion.div>
+              }}><button className={'rounded-[1vw] inline-block  h-[6vw] w-[33vw] gold-button'}><a className={'cursor-pointer'} href={'/marketplace'}><h2 className={'button-text font-title tracking-[0.13em] text-[3vw]'}>GO TO MARKETPLACE</h2></a></button></motion.div>
           </div>
 
           {/*/!*DONATE SYSTEM*!/*/}

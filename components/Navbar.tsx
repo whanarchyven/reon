@@ -36,12 +36,12 @@ export default class Navbar extends Component {
                             whileInView={'visible'}
 
                             viewport={{once:true}}
-                            transition={{ duration: 1, delay:0.3, ease:'easeInOut' ,repeatDelay:10, repeat:Infinity, repeatType: "reverse",}}
+                            transition={{ duration: 1, delay:0.3, ease:'easeInOut' ,repeatDelay:3, repeat:Infinity, repeatType: 'reverse',}}
                             variants={{
                                 visible: { opacity: 1, rotate: 10 },
                                 hidden: { opacity: 1, rotate: -10 }
                             }} >
-                    <Image src={'/images/reon_logo.png'} layout={'fill'}></Image>
+                    <a className={'cursor-pointer'} href={'/'}><Image src={'/images/reon_logo.png'} layout={'fill'}></Image></a>
                 </motion.div>
                 <div className={'inline-block absolute bottom-[-1vw] left-[6.6vw] w-[4.3vw] h-[4.3vw]'}>
                     <Image src={'/images/twitter_button.png'} layout={'fill'}></Image>
@@ -54,9 +54,9 @@ export default class Navbar extends Component {
                 </div>
                 <nav className={'absolute top-[5vw]'}>
                     <a className={'navbar-item'} href={'/'}>Main</a>
-                    <a className={'navbar-item'} href={'/coming'}>Arena</a>
-                    <a className={'navbar-item'} href={'/coming'}>Marketplace</a>
-                    <a className={'navbar-item'} href={'/taverna'}>Taverna</a>
+                    <a className={'navbar-item'} href={'/arena'}>Arena</a>
+                    <a className={'navbar-item'} href={'/marketplace'}>Marketplace</a>
+                    <a className={'navbar-item'} href={'/tavern'}>Tavern</a>
                     <a className={'navbar-item'} href={'/coming'}>My account</a>
                 </nav>
                 <button className={'rounded-[1vw] inline-block absolute left-[1vw] h-[4vw] w-[15vw] top-[23vw] gold-button'}><h2 className={'button-text font-title tracking-[0.13em] text-[1.5vw]'}>CONNECT WALLET</h2></button>
