@@ -103,18 +103,30 @@ const Marketplace: NextPage = () => {
 
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+        <footer>
+            <div className={'w-full h-[12vw]'}>
+                <div className={'w-[73%] left-[21%] top-[-2vw] relative h-full'}>
+                    <div className={'inline-block w-[8.5vw] h-[8.5vw] absolute top-[30%] left-0'}>
+                        <Image src={'/images/footer_logo.png'} layout={'fill'}></Image>
+                    </div>
+                    <a className={'tracking-[0.135em] font-title text-[1.5vw] top-[6.6vw] absolute text-reon left-[11vw]'} href={'/'}>MAIN</a>
+                    <a className={'tracking-[0.135em] font-title text-[1.5vw] top-[6.6vw] absolute text-reon left-[17.5vw]'} href={'/arena'}>ARENA</a>
+                    <a className={'tracking-[0.135em] font-title text-[1.5vw] top-[6.6vw] absolute text-reon left-[25.6vw]'} href={'/marketplace'}>MARKETPLACE</a>
+                    <a className={'tracking-[0.135em] font-title text-[1.5vw] top-[6.6vw] absolute text-reon left-[39.6vw]'} href={'/tavern'}>TAVERN</a>
+                    <a className={'tracking-[0.135em] font-title text-[1.5vw] top-[6.6vw] absolute text-reon left-[48.6vw]'} href={'/coming'}>MY ACCOUNT</a>
+                    <div className={'inline-block absolute top-[6vw] left-[64.6vw] w-[3.6vw] h-[3.6vw]'}>
+                        <Image src={'/images/twitter_button.png'} layout={'fill'}></Image>
+                    </div>
+                    <div className={'inline-block absolute top-[6vw] left-[68.9vw] w-[3.6vw] h-[3.6vw]'}>
+                        <Image src={'/images/telegram_button.png'} layout={'fill'}></Image>
+                    </div>
+                    <div className={'inline-block absolute top-[6vw] left-[60.3vw] w-[3.6vw] h-[3.6vw]'}>
+                        <Image src={'/images/mail_button.png'} layout={'fill'}></Image>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
     </div>
   )
 }

@@ -45,6 +45,15 @@
         letter-spacing: 0.035em;
 
     }
+    .footer-item{
+        display: inline-block;
+        font-family: "Another Danger Slanted";
+        color: white;
+        font-size: 1.9vw;
+        margin-bottom: 0.7vw;
+        cursor: pointer;
+        letter-spacing: 0.035em;
+    }
     .navbar-item:hover{
         background: url('../public/images/gold_texture.png');
         color: transparent;
