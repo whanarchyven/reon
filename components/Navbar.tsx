@@ -36,7 +36,7 @@ export default class Navbar extends Component {
                             whileInView={'visible'}
 
                             viewport={{once:true}}
-                            transition={{ duration: 1, delay:0.3, ease:'easeInOut' , repeat:Infinity, repeatType: "reverse",}}
+                            transition={{ duration: 1, delay:0.3, ease:'easeInOut' ,repeatDelay:10, repeat:Infinity, repeatType: "reverse",}}
                             variants={{
                                 visible: { opacity: 1, rotate: 10 },
                                 hidden: { opacity: 1, rotate: -10 }
@@ -53,7 +53,7 @@ export default class Navbar extends Component {
                     <Image src={'/images/mail_button.png'} layout={'fill'}></Image>
                 </div>
                 <nav className={'absolute top-[5vw]'}>
-                    <a className={'navbar-item'} href={'/n'}>Main</a>
+                    <a className={'navbar-item'} href={'/'}>Main</a>
                     <a className={'navbar-item'} href={'/coming'}>Arena</a>
                     <a className={'navbar-item'} href={'/coming'}>Marketplace</a>
                     <a className={'navbar-item'} href={'/taverna'}>Taverna</a>

@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import React, { useEffect } from "react";
 import Router from "next/router";
-
+import LoadingScreen from "../components/LoadingScreen";
 // @ts-ignore
 import NProgress from "nprogress";
 
@@ -12,14 +12,24 @@ Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // useEffect config material-ui
-  useEffect(() => {
-    // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector("#jss-server-side");
-    if (jssStyles && jssStyles.parentNode)
-      jssStyles.parentNode.removeChild(jssStyles);
+  const [loading, setLoading] = React.useState(false);
+  React.useEffect(() => {
+    setLoading(true);
   }, []);
-  return <Component {...pageProps} />
+  React.useEffect(() =>{
+    setTimeout(() => setLoading(false), 1500);
+  })
+  return (
+      <>
+        {!loading ? (
+            <React.Fragment>
+              <Component {...pageProps} />
+            </React.Fragment>
+        ) : (
+            <LoadingScreen />
+        )}
+      </>
+  );
 }
 
 export default MyApp

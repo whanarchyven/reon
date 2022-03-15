@@ -2,7 +2,7 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .container {
-
+  background-color: #103643;
 }
 
 
@@ -11,6 +11,7 @@
   min-height: 100vh;
   flex: 1;
   overflow-x: hidden;
+
 }
 
 .footer {
