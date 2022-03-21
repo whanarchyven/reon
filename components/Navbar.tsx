@@ -57,7 +57,7 @@ export default class Navbar extends Component {
                     <a className={'navbar-item'} href={'/arena'}>Arena</a>
                     <a className={'navbar-item'} href={'/marketplace'}>Marketplace</a>
                     <a className={'navbar-item'} href={'/tavern'}>Tavern</a>
-                    <a className={'navbar-item'} href={'/coming'}>My account</a>
+                    <a className={'navbar-item'} href={'/myAccount'}>My account</a>
                 </nav>
                 <button className={'rounded-[1vw] inline-block absolute left-[1vw] h-[4vw] w-[15vw] top-[23vw] gold-button'}><h2 className={'button-text font-title tracking-[0.13em] text-[1.5vw]'}>CONNECT WALLET</h2></button>
             </motion.div>
