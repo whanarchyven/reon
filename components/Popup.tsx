@@ -2,8 +2,34 @@ import React, { ReactNode, useState } from "react";
 import Image from "next/image";
 interface propsTestComponent {
     title:string;
-    items: Array <any>;
-    changeEquip:(currentItem:object)=>any;
+    items: Array <{name:string;
+        category:string;
+        fullscreen_image:string;
+        card_image:string;
+        miniature_image:string;
+        speed:number;
+        defence:number;
+        fist:number;
+        min_damage:number;
+        max_damage:number;
+        critical_hit:number;
+        health:number;
+        reaction:number;
+        luck:number;}>;
+    changeEquip:(currentItem: {name:string;
+        category:string;
+        fullscreen_image:string;
+        card_image:string;
+        miniature_image:string;
+        speed:number;
+        defence:number;
+        fist:number;
+        min_damage:number;
+        max_damage:number;
+        critical_hit:number;
+        health:number;
+        reaction:number;
+        luck:number;},category:string)=>any;
     handleClose: () => any;
 }
 export const Popup = ({ items, handleClose, title, changeEquip }: propsTestComponent) => {
@@ -17,10 +43,11 @@ export const Popup = ({ items, handleClose, title, changeEquip }: propsTestCompo
               {/*</div>*/}
 
               {items.map((item) => (
-                  <div className={'cursor-pointer relative inline-block my-[0.5vw] w-[12.9vw] mx-[3vw] h-[22.3vw]'} key={item.name} >
+                  <div className={'cursor-pointer relative inline-block my-[0.5vw] w-[12.9vw] mx-[3vw] h-[22.3vw]'} onClick={()=>{changeEquip(item,item.category)}} key={item.name} >
                       <Image src={item.card_image} layout={'fill'}></Image>
                   </div>
               ))}
+              {/*onClick={changeEquip(item)}*/}
           </div>
           <div className={'cursor-pointer gold-avatar w-[4vw] h-[4vw] rounded-full absolute inline-block top-[16vw] right-[-1vw] z-[101]'} onClick={handleClose}>
               <div className={'w-full h-full scale-[0.8] bg-reon rounded-full'}>

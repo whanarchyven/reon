@@ -32,7 +32,7 @@ const myAccount: NextPage = () => {
 
           {/*ARENA*/}
 
-          <div className={' block bg-cover text-[10px] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/account/account_bg.png)] relative w-[100vw] h-[112.5vw]'}>
+          <div className={' block bg-cover text-[10px] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/account.png)] relative w-[100vw] h-[112.5vw]'}>
               <Player></Player>
           </div>
 

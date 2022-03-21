@@ -111,7 +111,14 @@
     }
     .border-gold{
         border: 3px solid #F5F392;
-
+    }
+    .uncompleted-hero-bar{
+        background: #225253;
+        box-shadow: 0px 7.72222px 7.72222px rgba(0, 0, 0, 0.25), inset 0px 10.2396px 10.2396px rgba(0, 0, 0, 0.25);
+    }
+    .completed-hero-bar{
+        background: linear-gradient(157.16deg, #395B59 -2.82%, #75AFB1 42.13%, #395B59 99.93%);
+        box-shadow: 0px 7.72222px 7.72222px rgba(0, 0, 0, 0.25), inset 0px 10.2396px 10.2396px rgba(0, 0, 0, 0.25);
     }
 
 }
