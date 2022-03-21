@@ -2,7 +2,14 @@ import React, {Component, useState} from 'react';
 import {Popup} from "./Popup";
 import Image from "next/image";
 import {any, object} from "prop-types";
+import styled from "styled-components";
 
+const Statbar = styled.div<{width: string}>`
+  width: ${props => props.width};
+`
+const StatIndicator = styled.div<{margin: string}>`
+  left: ${props => props.margin};
+`
 
 interface fuckTypeScript {
     username:string;
@@ -18,7 +25,7 @@ interface fuckTypeScript {
         miniature_image:string;
         speed:number;
         defence:number;
-        fist:number;
+        strength:number;
         min_damage:number;
         max_damage:number;
         critical_hit:number;
@@ -34,7 +41,7 @@ interface fuckTypeScript {
         miniature_image:string;
         speed:number;
         defence:number;
-        fist:number;
+        strength:number;
         min_damage:number;
         max_damage:number;
         critical_hit:number;
@@ -50,7 +57,7 @@ interface fuckTypeScript {
         miniature_image:string;
         speed:number;
         defence:number;
-        fist:number;
+        strength:number;
         min_damage:number;
         max_damage:number;
         critical_hit:number;
@@ -82,7 +89,7 @@ class Player extends Component<any,fuckTypeScript> {
         miniature_image:string;
         speed:number;
         defence:number;
-        fist:number;
+        strength:number;
         min_damage:number;
         max_damage:number;
         critical_hit:number;
@@ -123,7 +130,7 @@ class Player extends Component<any,fuckTypeScript> {
                 miniature_image:'/images/account/copper/armor/miniatures',
                 speed:1,
                 defence:1,
-                fist:1,
+                strength:1,
                 min_damage:1,
                 max_damage:1,
                 critical_hit:1,
@@ -139,7 +146,7 @@ class Player extends Component<any,fuckTypeScript> {
                 miniature_image:'/images/account/copper/right_hand/miniatures/axe.png',
                 speed:1,
                 defence:1,
-                fist:1,
+                strength:1,
                 min_damage:1,
                 max_damage:1,
                 critical_hit:1,
@@ -155,7 +162,7 @@ class Player extends Component<any,fuckTypeScript> {
                 miniature_image:'/images/account/copper/left_hand/miniatures/shield.png',
                 speed:1,
                 defence:1,
-                fist:1,
+                strength:1,
                 min_damage:1,
                 max_damage:1,
                 critical_hit:1,
@@ -219,7 +226,7 @@ class Player extends Component<any,fuckTypeScript> {
         // @ts-ignore
         // @ts-ignore
         return (
-            <div className={'absolute inline-block left-[19.2vw] h-[92.6vw] top-[15.3vw] w-[78vw]'}>
+            <div className={'absolute scale-[0.9] inline-block left-[19.2vw] h-[92.6vw] top-[-4vw] w-[78vw]'}>
 
                 {/*scale-[0.9]*/}
                 {/*<h2 className={'absolute w-full text-center text-reon text-9xl top-0'}>{this.state.armorSlot.name}</h2>*/}
@@ -242,7 +249,7 @@ class Player extends Component<any,fuckTypeScript> {
                     <p className={'text-reon inline-block absolute font-desc left-[42.2vw] z-[99] top-[9.6vw] text-[2vw]'} onClick={()=>{this.setState({wallet_address:'0xf13D...9A8c'})}}>{this.state.wallet_address}</p>
                 </div>
 
-                <div className={'bg-cover bg-[url(../public/images/account/inventory_background.png)] rounded-[1vw] w-full h-[41vw] mt-[4.3vw] relative'}>
+                <div className={'bg-cover bg-[url(../public/images/account/inventory_background.png)] rounded-[1vw] w-full h-[41vw] mt-[1vw] relative'}>
                     {/*<p>bg-[url(../public/images/account/inventory_background.png)]</p>*/}
                     <div className={'w-[41vw] h-[41vw] left-[13vw] top-0 absolute inline-block'}>
                         <div className={'absolute w-full h-full z-[40]'}>
@@ -322,7 +329,7 @@ class Player extends Component<any,fuckTypeScript> {
                         </div>
                     </div>
                 </div>
-                <div className={'w-full relative border-2 mt-[2vw] h-[20vw] block'}>
+                <div className={'w-full stat-bg relative mt-[1vw] h-[20vw] block'}>
                     <div className={'absolute top-0 left-0 w-[5vw] h-[5vw]'}>
                         <Image src={'/images/account/corner.svg'} layout={'fill'}></Image>
                     </div>
@@ -336,20 +343,113 @@ class Player extends Component<any,fuckTypeScript> {
                         <Image src={'/images/account/corner.svg'} layout={'fill'}></Image>
                     </div>
 
-                    <div className={'absolute top-[3.6vw] left-[3.3vw] border-2 w-[25.7vw] h-[3.6vw]'}>
+                    {/*SPEED BAR*/}
+
+                    <div className={'absolute top-[3.6vw] left-[3.3vw]  w-[25.7vw] h-[3.6vw]'}>
                         <div className={'w-[14%] h-full relative inline-block'}>
                             <Image src={'/images/account/speed.svg'} layout={'fill'}></Image>
                         </div>
                         <div className={'relative inline-block ml-[4%] h-full w-[82%] '}>
-                            <div className={'absolute inline-flex border-[5px] border-white top-[25%] bottom-[25%] w-full h-[50%] rounded-full'}>
-                                <div className={'completed-hero-bar inline-block w-[10%] h-full'}></div>
-                                <div className={'uncompleted-hero-bar inline-block w-[90%] h-full'}></div>
+                            <div className={'shadow-[0px 7.72222px 7.72222px rgba(0, 0, 0, 0.25), inset 0px 10.2396px 10.2396px rgba(0, 0, 0, 0.25)] absolute inline-flex top-[25%] bottom-[25%] w-full h-[50%] '}>
+                                <Statbar className={'completed-hero-bar z-10 inline-block h-full'} width={(this.state.armorSlot.speed+this.state.leftHandSlot.speed+this.state.rightHandSlot.speed)*2.5+'%'}></Statbar>
+                                <Statbar className={'uncompleted-hero-bar z-10 inline-block h-full'} width={100-(this.state.armorSlot.speed+this.state.leftHandSlot.speed+this.state.rightHandSlot.speed)*2.5+'%'}></Statbar>
+                                <div className={'w-full h-full absolute inline-block border-[5px] border-[#DBDBDB] rounded-full z-30'}></div>
                             </div>
+                            <StatIndicator className={'stat-bar-indicator justify-center inline-flex w-[3.6vw] h-full absolute rounded-full z-[35] '} margin={((this.state.armorSlot.speed+this.state.leftHandSlot.speed+this.state.rightHandSlot.speed)*2.5)-7.97+'%'}>
+                                <h2 className={'leading-[158%] text-[2vw] font-desc inline-block text-[#214E4F]'}>{this.state.armorSlot.speed+this.state.leftHandSlot.speed+this.state.rightHandSlot.speed}</h2>
+                            </StatIndicator>
                         </div>
                     </div>
 
-                </div>
+                    {/*DEFENSE BAR*/}
 
+                    <div className={'absolute top-[7.4vw] left-[3.3vw]  w-[25.7vw] h-[3.6vw]'}>
+                        <div className={'w-[14%] h-full relative inline-block'}>
+                            <Image src={'/images/account/defense.svg'} layout={'fill'}></Image>
+                        </div>
+                        <div className={'relative inline-block ml-[4%] h-full w-[82%] '}>
+                            <div className={'shadow-[0px 7.72222px 7.72222px rgba(0, 0, 0, 0.25), inset 0px 10.2396px 10.2396px rgba(0, 0, 0, 0.25)] absolute inline-flex top-[25%] bottom-[25%] w-full h-[50%] '}>
+                                <Statbar className={'completed-hero-bar z-10 inline-block h-full'} width={(this.state.armorSlot.defence+this.state.leftHandSlot.defence+this.state.rightHandSlot.defence)*2.5+'%'}></Statbar>
+                                <Statbar className={'uncompleted-hero-bar z-10 inline-block h-full'} width={100-(this.state.armorSlot.defence+this.state.leftHandSlot.defence+this.state.rightHandSlot.defence)*2.5+'%'}></Statbar>
+                                <div className={'w-full h-full absolute inline-block border-[5px] border-[#DBDBDB] rounded-full z-30'}></div>
+                            </div>
+                            <StatIndicator className={'stat-bar-indicator justify-center inline-flex w-[3.6vw] h-full absolute rounded-full z-[35] '} margin={((this.state.armorSlot.defence+this.state.leftHandSlot.defence+this.state.rightHandSlot.defence)*2.5)-7.97+'%'}>
+                                <h2 className={'leading-[158%] text-[2vw] font-desc inline-block text-[#214E4F]'}>{this.state.armorSlot.defence+this.state.leftHandSlot.defence+this.state.rightHandSlot.defence}</h2>
+                            </StatIndicator>
+                        </div>
+                    </div>
+
+                    {/*STRENGTH BAR*/}
+
+                    <div className={'absolute top-[11.3vw] left-[3.3vw]  w-[25.7vw] h-[3.6vw]'}>
+                        <div className={'w-[14%] h-full relative inline-block'}>
+                            <Image src={'/images/account/strenght.svg'} layout={'fill'}></Image>
+                        </div>
+                        <div className={'relative inline-block ml-[4%] h-full w-[82%] '}>
+                            <div className={'shadow-[0px 7.72222px 7.72222px rgba(0, 0, 0, 0.25), inset 0px 10.2396px 10.2396px rgba(0, 0, 0, 0.25)] absolute inline-flex top-[25%] bottom-[25%] w-full h-[50%] '}>
+                                <Statbar className={'completed-hero-bar z-10 inline-block h-full'} width={(this.state.armorSlot.strength+this.state.leftHandSlot.strength+this.state.rightHandSlot.strength)*2.5+'%'}></Statbar>
+                                <Statbar className={'uncompleted-hero-bar z-10 inline-block h-full'} width={100-(this.state.armorSlot.strength+this.state.leftHandSlot.strength+this.state.rightHandSlot.strength)*2.5+'%'}></Statbar>
+                                <div className={'w-full h-full absolute inline-block border-[5px] border-[#DBDBDB] rounded-full z-30'}></div>
+                            </div>
+                            <StatIndicator className={'stat-bar-indicator justify-center inline-flex w-[3.6vw] h-full absolute rounded-full z-[35] '} margin={((this.state.armorSlot.strength+this.state.leftHandSlot.strength+this.state.rightHandSlot.strength)*2.5)-7.97+'%'}>
+                                <h2 className={'leading-[158%] text-[2vw] font-desc inline-block text-[#214E4F]'}>{this.state.armorSlot.strength+this.state.leftHandSlot.strength+this.state.rightHandSlot.strength}</h2>
+                            </StatIndicator>
+                        </div>
+                    </div>
+
+                    {/*CRITICAL HIT*/}
+
+                    <div className={'w-[12.5vw] h-[4vw] left-[33.2vw] top-[3.4vw] rounded-full absolute stat-window'}>
+                        <h2 className={'font-[600]  absolute font-desc left-[0.5vw] text-[1.4vw] top-[-1.5vw] silver-text'}>Critical Hit:</h2>
+                        <div className={'w-[3vw] left-[0.8vw] top-[1vw] h-[3vw] absolute'}>
+                            <Image src={'/images/account/critical_hit.svg'} layout={'fill'}></Image>
+                        </div>
+                        <div className={'stat-window-line w-[4.8vw] left-[3.87vw] top-[1.95vw] h-[2px] absolute rounded-full'}></div>
+                        <h2 className={'absolute leading-[100%] font-desc inline-block left-[9vw] top-[0.6vw] text-[2.6vw] silver-text'}>{this.state.armorSlot.critical_hit+this.state.leftHandSlot.critical_hit+this.state.rightHandSlot.critical_hit}</h2>
+                    </div>
+
+                    {/*REACTION*/}
+
+                    <div className={'w-[12.5vw] h-[4vw] left-[47vw] top-[3.4vw] rounded-full absolute stat-window'}>
+                        <h2 className={'font-[600]  absolute font-desc left-[0.5vw] text-[1.4vw] top-[-1.5vw] silver-text'}>Reaction:</h2>
+                        <div className={'w-[3vw] left-[0.8vw] top-[1vw] h-[3vw] absolute'}>
+                            <Image src={'/images/account/reaction.svg'} layout={'fill'}></Image>
+                        </div>
+                        <div className={'stat-window-line w-[4.8vw] left-[3.87vw] top-[1.95vw] h-[2px] absolute rounded-full'}></div>
+                        <h2 className={'absolute leading-[100%] font-desc inline-block left-[9vw] top-[0.6vw] text-[2.6vw] silver-text'}>{this.state.armorSlot.reaction+this.state.leftHandSlot.reaction+this.state.rightHandSlot.reaction}</h2>
+                    </div>
+
+                    {/*DAMAGE*/}
+
+                    <h2 className={'font-[600] absolute font-desc left-[36vw] text-[1.7vw] top-[8.3vw] silver-text'}>Damage:</h2>
+                    <div className={'stat-window left-[33.6vw] top-[11vw] justify-center inline-flex w-[5.6vw] h-[5.6vw] absolute rounded-full z-[35] '}>
+                        <h2 className={'silver-text leading-[182%] font-[600] text-[3vw] font-desc inline-block '}>{this.state.armorSlot.min_damage+this.state.leftHandSlot.min_damage+this.state.rightHandSlot.min_damage}</h2>
+                    </div>
+                    <p className={'font-[500] font-desc text-[1.6vw] left-[33.6vw] absolute text-center w-[5.6vw] top-[15.3vw] z-[70] text-[#FBF9E8] inline-block'}>Min</p>
+                    <div className={'stat-window left-[40.5vw] top-[11vw] justify-center inline-flex w-[5.6vw] h-[5.6vw] absolute rounded-full z-[35] '}>
+                        <h2 className={'silver-text leading-[182%] font-[600] text-[3vw] font-desc inline-block '}>{this.state.armorSlot.max_damage+this.state.leftHandSlot.max_damage+this.state.rightHandSlot.max_damage}</h2>
+                    </div>
+                    <p className={'font-[500] font-desc text-[1.6vw] left-[40.5vw] absolute text-center w-[5.6vw] top-[15.3vw] z-[70] text-[#FBF9E8] inline-block'}>Max</p>
+
+
+                    {/*LUCK*/}
+
+                    <div className={'w-[8.5vw] absolute left-[49vw] top-[10vw] h-[8.5vw]'}>
+                        <Image src={'/images/account/luck.svg'} layout={'fill'}></Image>
+                    </div>
+                    <h2 className={'silver-text absolute text-center leading-[180%] w-[8.5vw] h-[8.5vw] left-[49vw] top-[10vw] font-[600] text-[4.5vw] font-desc inline-block '}>{this.state.armorSlot.luck+this.state.leftHandSlot.luck+this.state.rightHandSlot.luck}</h2>
+                    <div className={'w-[6.2vw] absolute left-[52.3vw] top-[8vw] h-[6.2vw]'}>
+                        <Image src={'/images/account/luck_title.svg'} layout={'fill'}></Image>
+                    </div>
+
+                    {/*HEALTH*/}
+
+                    <h2 className={'font-[600] absolute font-desc left-[64.5vw] text-[1.9vw] top-[2.8vw] silver-text'}>Health:</h2>
+                    <div className={'stat-window left-[63vw] top-[5.7vw] justify-center inline-flex border-[#DBDBDB] border-[0.3vw]  w-[10.5vw] h-[10.5vw] absolute rounded-full z-[35] '}>
+                        <h2 className={'silver-text leading-[167%] font-[600] text-[5.5vw] font-desc inline-block '}>{this.state.armorSlot.health+this.state.leftHandSlot.health+this.state.rightHandSlot.health}</h2>
+                    </div>
+
+                </div>
 
 
                 {/*<button className={'w-full absolute bottom-0 text-reon text-9xl bg-[#000]'} onClick={()=>{this.selectLeftHand(PlayerInventory.leftHands[4])}}>Тестирование функционала</button>*/}
@@ -370,13 +470,29 @@ const PlayerInventory= {
             miniature_image:'/images/account/copper/armor/miniatures',
             speed:1,
             defence:1,
-            fist:1,
+            strength:1,
             min_damage:1,
             max_damage:1,
             critical_hit:1,
             health:1,
             reaction:1,
             luck:1,
+        },
+        {
+            name:'Iron Armor',
+            category:'armor',
+            fullscreen_image:'/images/account/iron/armor/fullscreens/',
+            card_image:'/images/account/iron/armor/cards/armor.png',
+            miniature_image:'/images/account/iron/armor/miniatures',
+            speed:4,
+            defence:4,
+            strength:4,
+            min_damage:4,
+            max_damage:4,
+            critical_hit:4,
+            health:4,
+            reaction:4,
+            luck:4,
         },
     ],
     rightHands:[
@@ -388,7 +504,7 @@ const PlayerInventory= {
             miniature_image:'/images/account/copper/right_hand/miniatures/axe.png',
             speed:1,
             defence:1,
-            fist:1,
+            strength:1,
             min_damage:1,
             max_damage:1,
             critical_hit:1,
@@ -404,7 +520,7 @@ const PlayerInventory= {
             miniature_image:'/images/account/copper/right_hand/miniatures/sword.png',
             speed:1,
             defence:1,
-            fist:1,
+            strength:1,
             min_damage:1,
             max_damage:1,
             critical_hit:1,
@@ -422,7 +538,7 @@ const PlayerInventory= {
             miniature_image:'/images/account/copper/left_hand/miniatures/sword.png',
             speed:1,
             defence:1,
-            fist:1,
+            strength:1,
             min_damage:1,
             max_damage:1,
             critical_hit:1,
@@ -438,7 +554,7 @@ const PlayerInventory= {
             miniature_image:'/images/account/copper/left_hand/miniatures/sword.png',
             speed:1,
             defence:1,
-            fist:1,
+            strength:1,
             min_damage:1,
             max_damage:1,
             critical_hit:1,
@@ -454,7 +570,7 @@ const PlayerInventory= {
             miniature_image:'/images/account/copper/left_hand/miniatures/sword.png',
             speed:1,
             defence:1,
-            fist:1,
+            strength:1,
             min_damage:1,
             max_damage:1,
             critical_hit:1,
@@ -470,7 +586,7 @@ const PlayerInventory= {
             miniature_image:'/images/account/copper/left_hand/miniatures/sword.png',
             speed:1,
             defence:1,
-            fist:1,
+            strength:1,
             min_damage:1,
             max_damage:1,
             critical_hit:1,
@@ -486,7 +602,7 @@ const PlayerInventory= {
             miniature_image:'/images/account/copper/left_hand/miniatures/shield.png',
             speed:1,
             defence:1,
-            fist:1,
+            strength:1,
             min_damage:1,
             max_damage:1,
             critical_hit:1,
@@ -500,15 +616,15 @@ const PlayerInventory= {
             fullscreen_image:'/images/account/copper/left_hand/fullscreens/axe.png',
             card_image:'/images/account/copper/left_hand/cards/axe.png',
             miniature_image:'/images/account/copper/left_hand/miniatures/axe.png',
-            speed:1,
-            defence:1,
-            fist:1,
-            min_damage:1,
-            max_damage:1,
-            critical_hit:1,
-            health:1,
-            reaction:1,
-            luck:1,
+            speed:31,
+            defence:13,
+            strength:22,
+            min_damage:11,
+            max_damage:14,
+            critical_hit:9,
+            health:2,
+            reaction:3,
+            luck:3,
         },
 
     ],

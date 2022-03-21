@@ -9,7 +9,7 @@ interface propsTestComponent {
         miniature_image:string;
         speed:number;
         defence:number;
-        fist:number;
+        strength:number;
         min_damage:number;
         max_damage:number;
         critical_hit:number;
@@ -23,7 +23,7 @@ interface propsTestComponent {
         miniature_image:string;
         speed:number;
         defence:number;
-        fist:number;
+        strength:number;
         min_damage:number;
         max_damage:number;
         critical_hit:number;
