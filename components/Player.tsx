@@ -3,10 +3,84 @@ import {Popup} from "./Popup";
 import Image from "next/image";
 import {any} from "prop-types";
 
-class Player extends Component {
+
+interface fuckTypeScript {
+    username:string;
+    level:number;
+    avatar:string;
+    wallet_address:string;
+
+    armorSlot:{
+        name:string;
+        fullscreen_image:string;
+        card_image:string;
+        miniature_image:string;
+        speed:number;
+        defence:number;
+        fist:number;
+        min_damage:number;
+        max_damage:number;
+        critical_hit:number;
+        health:number;
+        reaction:number;
+        luck:number;
+    },
+    rightHandSlot:{
+        name:string;
+        fullscreen_image:string;
+        card_image:string;
+        miniature_image:string;
+        speed:number;
+        defence:number;
+        fist:number;
+        min_damage:number;
+        max_damage:number;
+        critical_hit:number;
+        health:number;
+        reaction:number;
+        luck:number;
+    },
+    leftHandSlot:{
+        name:string;
+        fullscreen_image:string;
+        card_image:string;
+        miniature_image:string;
+        speed:number;
+        defence:number;
+        fist:number;
+        min_damage:number;
+        max_damage:number;
+        critical_hit:number;
+        health:number;
+        reaction:number;
+        luck:number;
+    },
+    helmetSlot:{
+        name:string;
+        fullscreen_image:string;
+        card_image:string;
+        miniature_image:string;
+        speed:number;
+        defence:number;
+        fist:number;
+        min_damage:number;
+        max_damage:number;
+        critical_hit:number;
+        health:number;
+        reaction:number;
+        luck:number;
+    },
+    ////////
+
+    isOpen:boolean,
+    invItems: Array<any>,
+    invTitle:string;
+}
+
+
+class Player extends Component<any,fuckTypeScript> {
     private Init: () => void;
     private togglePopup: () => void;
-    private changeLeftHand: (item:object) => void;
     private choseArmorSlot: () => void;
     private choseLeftHandSlot: () => void;
     private choseRightHandSlot: () => void;
@@ -91,7 +165,6 @@ class Player extends Component {
             isOpen:false,
             invItems:[],
             invTitle:'',
-            invChangeFunction:()=>any,
         };
         this.Init= ()=>{
             this.setState({armorSlot:PlayerInventory.armors[0]});
@@ -100,17 +173,10 @@ class Player extends Component {
             this.setState({helmetSlot:PlayerInventory.helmets[0]});
             this.setState({invItems:PlayerInventory.leftHands});
             this.setState({invTitle:'Left hand'});
-            this.setState({invChangeFunction:this.changeLeftHand})
         };
 
         this.togglePopup = () => {
             this.setState({isOpen: !this.state.isOpen});
-        };
-
-
-
-        this.changeLeftHand=(item)=>{
-            this.setState({leftHandSlot:item})
         };
 
 
@@ -152,6 +218,7 @@ class Player extends Component {
     }
     render() {
 
+        // @ts-ignore
         // @ts-ignore
         // @ts-ignore
         // @ts-ignore
@@ -264,7 +331,7 @@ class Player extends Component {
 
 
                 <button className={'w-full absolute bottom-0 text-reon text-9xl bg-[#000]'} onClick={this.testChange}>Тестирование функционала</button>
-                {this.state.isOpen && <Popup changeEquip={this.changeLeftHand} items={this.state.invItems} title={this.state.invTitle}  handleClose={this.togglePopup} />}
+                {this.state.isOpen && <Popup changeEquip={this.testChange} items={this.state.invItems} title={this.state.invTitle}  handleClose={this.togglePopup}/>}
             </div>
         );
     }
