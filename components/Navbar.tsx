@@ -4,7 +4,12 @@ import Image from 'next/image';
 // @ts-ignore
 import {motion} from "framer-motion";
 import { Link, animateScroll as scroll } from "react-scroll";
-export default class Navbar extends Component {
+
+interface navInterface{
+    connect?:()=> {}
+}
+
+export default class Navbar extends React.Component<any,navInterface> {
     render() {
         const settings = {
             dots: true,
@@ -57,9 +62,9 @@ export default class Navbar extends Component {
                     <a className={'navbar-item'} href={'/arena'}>Arena</a>
                     <a className={'navbar-item'} href={'/marketplace'}>Marketplace</a>
                     <a className={'navbar-item'} href={'/tavern'}>Tavern</a>
-                    <a className={'navbar-item'} href={'/myAccount'}>My account</a>
+                    <a className={'navbar-item'} href={'/MyAccount'}>My account</a>
                 </nav>
-                <button className={'rounded-[1vw] inline-block absolute left-[1vw] h-[4vw] w-[15vw] top-[23vw] gold-button'}><h2 className={'button-text font-title tracking-[0.13em] text-[1.5vw]'}>CONNECT WALLET</h2></button>
+                <button className={'rounded-[1vw] inline-block absolute left-[1vw] h-[4vw] w-[15vw] top-[23vw] gold-button'} onClick={()=>{this.props.connect()}}><h2 className={'button-text font-title tracking-[0.13em] text-[1.5vw]'}>CONNECT WALLET</h2></button>
             </motion.div>
         );
     }

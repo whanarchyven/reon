@@ -1,11 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from "../components/Navbar"
 import Player from "../components/Player";
-const myAccount: NextPage = () => {
+import {Popup} from "../components/Popup";
+import LoadingScreen from "../components/LoadingScreen";
+import {motion} from "framer-motion";
+const MyAccount: NextPage = () => {
+    const [isWalletConnected,setIsWalletConnected]=useState(false);
+
+    const connectWallet=()=>{
+        setIsWalletConnected(true);
+    }
+
   return (
       <div>
       <Head>
@@ -28,12 +37,35 @@ const myAccount: NextPage = () => {
 
       <main className={styles.main}>
 
-          <Navbar></Navbar>
+          <Navbar connect={connectWallet}/>
 
           {/*ARENA*/}
 
-          <div className={' block bg-cover text-[10px] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/account/account_bg.png)] relative w-[100vw] h-[112.5vw]'}>
-              <Player></Player>
+          <div className={' block bg-cover text-[10px] sm:text-[25px] lg:text-[30px] bg-[url(../public/images/account/account_bg.png)] relative w-[100vw] overflow-hidden h-[63.5vw]'}>
+              {isWalletConnected ? <Player></Player>:
+                  <motion.div className={'bg-cover w-[100vw] h-full bg-[url(../public/images/loadscreen.png)] '} initial="hidden"
+                                                                 whileInView={'visible'}
+
+                                                                 transition={{ duration: 0.1, delay:1.5, ease:'backInOut' ,}}
+                                                                 variants={{
+                                                                     visible: { opacity: 1, y: 0 },
+                                                                     hidden: { opacity: 1, y: 0 }
+                                                                 }}>
+                  <div className={'absolute w-[12vw] h-[12vw] left-[44vw] top-[20vw]'}>
+                      <Image src={'/images/reonLoadLogo.png'} layout={'fill'}></Image>
+                  </div>
+                  <motion.div className={'absolute w-[20vw] h-[20vw] left-[39.5vw] top-[17vw]'} initial="hidden"
+                              whileInView={'visible'}
+                              viewport={{once:true}}
+                              transition={{ duration: 3, delay:0.3, ease:'linear' , repeat:Infinity,}}
+                              variants={{
+                                  visible: { opacity: 1, rotate: 0 },
+                                  hidden: { opacity: 1, rotate: -360 }
+                              }}>
+                      <Image src={'/images/loadbar.png'} layout={'fill'}></Image>
+                  </motion.div>
+                      <h2 className={'w-[50vw] left-[25vw] right-[25vw] text-[4vw] top-[5vw] text-center gold-title font-title absolute'}>Conncet wallet to <br/> customize your hero!</h2>
+              </motion.div>}
           </div>
 
 
@@ -67,4 +99,4 @@ const myAccount: NextPage = () => {
   )
 }
 
-export default myAccount
+export default MyAccount

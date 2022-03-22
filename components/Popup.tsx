@@ -43,7 +43,7 @@ export const Popup = ({ items, handleClose, title, changeEquip }: propsTestCompo
               {/*</div>*/}
 
               {items.map((item) => (
-                  <div className={'cursor-pointer relative inline-block my-[0.5vw] w-[12.9vw] mx-[3vw] h-[22.3vw]'} onClick={()=>{changeEquip(item,item.category)}} key={item.name} >
+                  <div className={'cursor-pointer relative inline-block my-[0.5vw] w-[12.9vw] mx-[3vw] h-[22.3vw]'} onClick={()=>{changeEquip(item,item.category);handleClose()}} key={item.name} >
                       <Image src={item.card_image} layout={'fill'}></Image>
                   </div>
               ))}

@@ -226,28 +226,28 @@ class Player extends Component<any,fuckTypeScript> {
         // @ts-ignore
         // @ts-ignore
         return (
-            <div className={'absolute scale-[0.9] inline-block left-[19.2vw] h-[92.6vw] top-[-4vw] w-[78vw]'}>
+            <div className={'absolute scale-[0.8] inline-block left-[19.2vw] h-[92.6vw] top-[-9vw] w-[78vw]'}>
 
                 {/*scale-[0.9]*/}
                 {/*<h2 className={'absolute w-full text-center text-reon text-9xl top-0'}>{this.state.armorSlot.name}</h2>*/}
                 {/*<h2 className={'absolute w-full text-center text-reon text-9xl top-1/2'}>{this.state.shoesSlot.name}</h2>*/}
-                <div className={'w-full block relative h-[16.3vw] z-[5] account-blur-shape rounded-[1vw] '}>
-                    <div className={'w-[9vw] left-[4.3vw] top-[3.3vw] h-[9vw] absolute scale-[1.5]'}>
-                            <Image src={'/images/reon_logo.png'} layout={'fill'} className={'rounded-full'}></Image>
-                    </div>
-                    <h1 className={'tracking-[0.035em] absolute left-[17vw] text-left inline-block top-[4.5vw] text-reon text-[4vw] font-title'}>{this.state.username}</h1>
-                    <div className={' justify-center flex w-[7vw] h-[6vw] absolute left-[39vw] top-[2.6vw]'}>
-                        <div className={'w-full h-full absolute inline-block'}>
-                            <Image src={'/images/account/level_back.png'} layout={'fill'}></Image>
-                        </div>
-                        <p className={'top-[5%] text-[3vw] silver-text  font-desc absolute inline-block'}>{this.state.level}</p>
-                    </div>
-                    <p className={'text-reon inline-block absolute font-desc left-[47vw] top-[4.6vw] text-[1.1vw]'}>LvL</p>
-                    <div className={'w-[3vw] left-[39vw] top-[9.6vw] h-[3vw] absolute inline-block'}>
-                        <Image src={'/images/account/wallet.svg'} layout={'fill'}></Image>
-                    </div>
-                    <p className={'text-reon inline-block absolute font-desc left-[42.2vw] z-[99] top-[9.6vw] text-[2vw]'} onClick={()=>{this.setState({wallet_address:'0xf13D...9A8c'})}}>{this.state.wallet_address}</p>
-                </div>
+                {/*<div className={'w-full block relative h-[16.3vw] z-[5] account-blur-shape rounded-[1vw] '}>*/}
+                {/*    <div className={'w-[9vw] left-[4.3vw] top-[3.3vw] h-[9vw] absolute scale-[1.5]'}>*/}
+                {/*            <Image src={'/images/reon_logo.png'} layout={'fill'} className={'rounded-full'}></Image>*/}
+                {/*    </div>*/}
+                {/*    <h1 className={'tracking-[0.035em] absolute left-[17vw] text-left inline-block top-[4.5vw] text-reon text-[4vw] font-title'}>{this.state.username}</h1>*/}
+                {/*    <div className={' justify-center flex w-[7vw] h-[6vw] absolute left-[39vw] top-[2.6vw]'}>*/}
+                {/*        <div className={'w-full h-full absolute inline-block'}>*/}
+                {/*            <Image src={'/images/account/level_back.png'} layout={'fill'}></Image>*/}
+                {/*        </div>*/}
+                {/*        <p className={'top-[5%] text-[3vw] silver-text  font-desc absolute inline-block'}>{this.state.level}</p>*/}
+                {/*    </div>*/}
+                {/*    <p className={'text-reon inline-block absolute font-desc left-[47vw] top-[4.6vw] text-[1.1vw]'}>LvL</p>*/}
+                {/*    <div className={'w-[3vw] left-[39vw] top-[9.6vw] h-[3vw] absolute inline-block'}>*/}
+                {/*        <Image src={'/images/account/wallet.svg'} layout={'fill'}></Image>*/}
+                {/*    </div>*/}
+                {/*    <p className={'text-reon inline-block absolute font-desc left-[42.2vw] z-[99] top-[9.6vw] text-[2vw]'} onClick={()=>{this.setState({wallet_address:'0xf13D...9A8c'})}}>{this.state.wallet_address}</p>*/}
+                {/*</div>*/}
 
                 <div className={'bg-cover bg-[url(../public/images/account/inventory_background.png)] rounded-[1vw] w-full h-[41vw] mt-[1vw] relative'}>
                     {/*<p>bg-[url(../public/images/account/inventory_background.png)]</p>*/}
@@ -280,7 +280,7 @@ class Player extends Component<any,fuckTypeScript> {
                     </div>
 
                     {/*BOOTS*/}
-                    <div className={'absolute left-[9.2vw] z-[50] cursor-pointer top-[27vw] inline-block w-[9vw] h-[9vw]'} onClick={this.choseArmorSlot}>
+                    <div className={'absolute left-[9.2vw] z-[50] cursor-pointer top-[15vw] inline-block w-[9vw] h-[9vw]'} onClick={this.choseArmorSlot}>
                         <div className={'w-full scale-110 absolute inline-block h-full'}>
                             <Image src={'/images/account/inventory_item.png'} layout={'fill'}></Image>
                         </div>
@@ -300,7 +300,7 @@ class Player extends Component<any,fuckTypeScript> {
                     </div>
 
                     {/*RIGHT HAND*/}
-                    <div className={'absolute left-[9.2vw] z-[50] cursor-pointer top-[15vw] inline-block w-[9vw] h-[9vw]'} onClick={this.choseRightHandSlot}>
+                    <div className={'absolute left-[9.2vw] z-[50] cursor-pointer top-[27vw] inline-block w-[9vw] h-[9vw]'} onClick={this.choseRightHandSlot}>
                         <div className={'w-full scale-110 absolute inline-block h-full'}>
                             <Image src={'/images/account/inventory_item.png'} layout={'fill'}></Image>
                         </div>
@@ -329,7 +329,7 @@ class Player extends Component<any,fuckTypeScript> {
                         </div>
                     </div>
                 </div>
-                <div className={'w-full stat-bg relative mt-[1vw] h-[20vw] block'}>
+                <div className={'w-full stat-bg relative mt-[0vw] h-[20vw] block'}>
                     <div className={'absolute top-0 left-0 w-[5vw] h-[5vw]'}>
                         <Image src={'/images/account/corner.svg'} layout={'fill'}></Image>
                     </div>

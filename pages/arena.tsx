@@ -106,7 +106,7 @@ const Arena: NextPage = () => {
 
       </main>
 
-        <footer>
+        <footer className={'bg-[#103643]'}>
             <div className={'w-full h-[12vw]'}>
                 <div className={'w-[73%] left-[21%] top-[-2vw] relative h-full'}>
                     <div className={'inline-block w-[8.5vw] h-[8.5vw] absolute top-[30%] left-0'}>
